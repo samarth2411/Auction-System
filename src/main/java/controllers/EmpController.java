@@ -54,6 +54,12 @@ public class EmpController {
 
     }
 
+    public Result getUserEmail(@PathParam("email") String email){
+        AppUser user = userDao.getUserEmail(email);
+        return Results.json().render(user);
+
+    }
+
     public Result logout(Session session,Context context){
         System.out.println("User Logged Out");
         session.clear();

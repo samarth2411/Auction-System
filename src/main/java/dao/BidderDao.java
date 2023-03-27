@@ -7,6 +7,7 @@ import com.google.inject.persist.Transactional;
 import dto.BidderDto;
 import models.AppUser;
 import models.Bidder;
+import models.Product;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -66,6 +67,8 @@ public class BidderDao {
         }
         return null;
     }
+
+
 
 
 }

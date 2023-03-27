@@ -29,7 +29,8 @@ create table Product(
     startTime bigint not null,
     endTime bigint not null,
     price bigint not null,
-    isActive boolean not null
+    isActive boolean not null,
+    isRejected boolean not null
 );
 
 create table AppUser(

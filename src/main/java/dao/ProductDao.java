@@ -9,6 +9,7 @@ import models.Product;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -37,6 +38,7 @@ public class ProductDao {
             product.setEndTime(productDto.getEndTime());
             product.setPrice(productDto.getPrice());
             product.setActive(false);
+            product.setRejected(false);
             entityManager.persist(product);
             System.out.println("Product Created");
 
@@ -102,5 +104,52 @@ public class ProductDao {
         List<Product> products = namedQuery.getResultList();
         return products;
 
+    }
+
+    @Transactional
+    public Long showAllIsActiveProduct(){
+        EntityManager em = entityManagerProvider.get();
+        return em.createNamedQuery("ProductEntity.GetByProductIsActive",Long.class).getSingleResult();
+    }
+
+    @Transactional
+    public Product isRejected(Long productId){
+        try {
+            EntityManager em = entityManagerProvider.get();
+            TypedQuery<Product> q = em.createQuery("select p from Product p where p.id=:productId", Product.class);
+            List<Product> p = q.setParameter("productId", productId).getResultList();
+            if (p.size() != 0) {
+                p.get(0).setRejected(true);
+                return p.get(0);
+            } else {
+                System.out.println("Product does not exist");
+            }
+            return null;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }
+
+    }
+
+    public Product inAuction(Long productId){
+        try{
+            EntityManager em = entityManagerProvider.get();
+            TypedQuery<Product> q = em.createQuery("select p from Product p where p.id=:productId", Product.class);
+            List<Product> p = q.setParameter("productId", productId).getResultList();
+            if(p.size() != 0){
+                p.get(0).setInAuction(true);
+                return p.get(0);
+            }
+            else{
+                System.out.println("Product does not exist");
+            }
+            return null;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }
     }
 }

@@ -5,13 +5,14 @@ import java.util.Date;
 @Entity
 @Table(schema = "public")
 @NamedQueries({
-        @NamedQuery(name="ProductEntity.GetByProductNotInAuction", query = "SELECT p from Product p where p.inAuction=false"),
-        @NamedQuery(name="ProductEntity.CountByProductNotInAuction", query = "SELECT count(p) from Product p where p.inAuction=false"),
+        @NamedQuery(name="ProductEntity.GetByProductNotInAuction", query = "SELECT p from Product p where p.inAuction=false and p.isRejected=false"),
+        @NamedQuery(name="ProductEntity.CountByProductNotInAuction", query = "SELECT count(p) from Product p where p.inAuction=false and p.isRejected=false"),
         @NamedQuery(name = "Product.WinCountByUserId",query = "select count(pw) from Product pw where pw.winner=:userId"),
         @NamedQuery(name = "Product.LostCountByUserId",query = "select count(pw) from Product pw where pw.winner!=:userId"),
-        @NamedQuery(name="ProductEntity.GetByProductInAuction", query = "SELECT p from Product p where p.inAuction=true"),
+        @NamedQuery(name="ProductEntity.GetByProductInAuction", query = "SELECT p from Product p where p.inAuction=true and p.isRejected=false"),
         @NamedQuery(name="ProductEntity.GetByProductId", query = "SELECT p from Product p where p.id=:id"),
-        @NamedQuery(name = "Product.getAllProductsByEmail",query = "select p from Product p where p.owner=:owner")
+        @NamedQuery(name = "Product.getAllProductsByEmail",query = "select p from Product p where p.owner=:owner"),
+        @NamedQuery(name="ProductEntity.GetByProductIsActive", query = "SELECT count(p) from Product p where p.isActive=true")
 }
 )
 public class Product {
@@ -31,6 +32,19 @@ public class Product {
     private Long price;
 
     private boolean isActive;
+
+    private boolean isRejected;
+
+
+    public boolean isRejected() {
+        return isRejected;
+    }
+
+    public void setRejected(boolean rejected) {
+        isRejected = rejected;
+    }
+
+
 
 
     public boolean isActive() {

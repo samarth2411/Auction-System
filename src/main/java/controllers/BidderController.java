@@ -28,6 +28,7 @@ public class BidderController {
     }
 
     public Result findBidder(@PathParam("productId") Long productId){
+        System.out.println("Bidders Data");
         try{
             List<Bidder> bidder = bidderDao.findBidderByProductId(productId);
             System.out.println("All the Bidders with product Id "+ productId + " Retreived");

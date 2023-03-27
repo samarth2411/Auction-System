@@ -120,6 +120,17 @@ public class EmployeeDao {
         }
 
     }
+    @Transactional
+    public AppUser getUserEmail(String email){
+        EntityManager em = entityManagerProvider.get();
+        Query namedQuery = em.createNamedQuery("AppUser.getUserByMail");
+        List<AppUser> list = namedQuery.setParameter("email", email).getResultList();
+        if (list.size() == 0) {
+            return null;
+        } else {
+            return list.get(0);
+        }
+    }
 
 
 

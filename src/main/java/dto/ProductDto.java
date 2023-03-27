@@ -17,6 +17,8 @@ public class ProductDto {
 
     private Long price;
 
+    private boolean isRejected;
+
     public Long getPrice() {
         return price;
     }

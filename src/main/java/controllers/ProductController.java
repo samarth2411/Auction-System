@@ -55,7 +55,13 @@ public class ProductController {
         return Results.json().render(productDao.showAllInAuctionProduct());
     }
 
-    public Result singleProductWithId(@Param("id") Long id) throws Exception{
+
+    public Result isActiveProducts(){
+        System.out.println("All Active Products Retreived");
+        return Results.json().render(productDao.showAllIsActiveProduct());
+    }
+
+    public Result singleProductWithId(@PathParam("id") Long id) throws Exception{
         try {
             Product product = productDao.showProductWithId(id);
             System.out.println("Product with id " + id + "Retreived");
@@ -70,5 +76,27 @@ public class ProductController {
     public Result getAllProducts(@PathParam("owner") String owner){
        List<Product> productList =  productDao.showAllProduct(owner);
        return Results.json().render(productList);
+    }
+
+    public Result updateIsRejected(@PathParam("productId") Long productId){
+        try {
+            Product product = productDao.isRejected(productId);
+            return Results.json().render(product);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    public Result updateInAuction(@PathParam("productId") Long productId){
+        try{
+            Product product = productDao.inAuction(productId);
+            return Results.json().render(product);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }
     }
 }

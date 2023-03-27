@@ -115,13 +115,23 @@ public class Routes implements ApplicationRoutes {
 
         router.POST().route("/totalLoss").with(ProductController::totalLoss);
 
-        router.GET().route("/inAuctionProducts").with(ProductController::allInAuctionProducts);
+        router.GET().route("/inAuctionProducts").filters(CorsHandler.class).with(ProductController::allInAuctionProducts);
 
-        router.POST().route("/product").with(ProductController::singleProductWithId);
+        router.GET().route("/isActiveProducts").filters(CorsHandler.class).with(ProductController::isActiveProducts);
 
-        router.POST().route("/bidders/{id}").with(BidderController::findBidder);
+        router.POST().route("/product/{id}").with(ProductController::singleProductWithId);
+
+        router.POST().route("/bidders/{productId}").filters(CorsHandler.class).with(BidderController::findBidder);
 
         router.GET().route("/getUser").filters(CorsHandler.class).with(EmpController::getUser);
+
+        router.POST().route("/employee/get/{email}").filters(CorsHandler.class).with(EmpController::getUserEmail);
+
+
+        router.POST().route("/updateIsRejected/{productId}").filters(CorsHandler.class).with(ProductController::updateIsRejected);
+
+
+        router.POST().route("/updateInAuction/{productId}").filters(CorsHandler.class).with(ProductController::updateInAuction);
 
 
 
