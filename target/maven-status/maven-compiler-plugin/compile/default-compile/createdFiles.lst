@@ -19,3 +19,4 @@ models\Product.class
 dto\UserDto.class
 controllers\BidderController.class
 conf\Module.class
+conf\ScheduledAction.class

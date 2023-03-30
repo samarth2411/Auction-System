@@ -12,7 +12,9 @@ import java.util.Date;
         @NamedQuery(name="ProductEntity.GetByProductInAuction", query = "SELECT p from Product p where p.inAuction=true and p.isRejected=false"),
         @NamedQuery(name="ProductEntity.GetByProductId", query = "SELECT p from Product p where p.id=:id"),
         @NamedQuery(name = "Product.getAllProductsByEmail",query = "select p from Product p where p.owner=:owner"),
-        @NamedQuery(name="ProductEntity.GetByProductIsActive", query = "SELECT count(p) from Product p where p.isActive=true")
+        @NamedQuery(name="ProductEntity.GetByProductIsActive", query = "SELECT count(p) from Product p where p.isActive=true"),
+        @NamedQuery(name="ProductEntity.GetProductList",query="select p from Product p where p.isActive=true and p.endTime<:time"),
+        @NamedQuery(name="ProductEntity.setIsActive",query = "select p from Product p where p.isActive=false and p.startTime<=:time and p.endTime>:time")
 }
 )
 public class Product {

@@ -44,10 +44,14 @@ public class BidderDao {
     }
 
     @Transactional
-    public Bidder findBidderWithMaxBid(){
+    public Bidder findBidderWithMaxBid(Long productId){
+        System.out.println("Find Bid with max bid is called");
         EntityManager em = entityManagerProvider.get();
-        Query namedQuery = em.createNamedQuery("Bidder.findBidderWithMaxBid");
-        List<Bidder> winners = namedQuery.getResultList();
+        List<Bidder> winners  = em.createNamedQuery("Bidder.findMaxBid").setParameter("productId",productId).setMaxResults(1).getResultList();
+        System.out.println("Winner Size for the Product Id "+ productId+ " is  "+ winners.size());
+        if(winners.size()==0) {
+            return null;
+        }
         return winners.get(0);
     }
 
@@ -66,6 +70,20 @@ public class BidderDao {
             System.out.println("Bidder does not exist");
         }
         return null;
+    }
+
+    public Bidder getBidder(Long productId, String userId){
+        EntityManager em = entityManagerProvider.get();
+        System.out.println(productId);
+        System.out.println(userId);
+        Query namedQuery = em.createNamedQuery("Bidder.findBidderByUserIdAndProductId").setParameter("productId",productId).setParameter("userId",userId);
+        List<Bidder> bidder = namedQuery.getResultList();
+        if(bidder.size()!=0){
+            return bidder.get(0);
+        }
+        else{
+            return null;
+        }
     }
 
 

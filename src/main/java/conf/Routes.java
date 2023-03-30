@@ -109,9 +109,9 @@ public class Routes implements ApplicationRoutes {
 
         router.POST().route("/bidder/add").with(BidderController::addBidder);
 
-        router.POST().route("/bidder/count").with(BidderController::countTotalBids);
+        router.POST().route("/bidder/count/{userId}").filters(CorsHandler.class).with(BidderController::countTotalBids);
 
-        router.POST().route("/totalWins").with(ProductController::totalWin);
+        router.POST().route("/totalWins/{userId}").filters(CorsHandler.class).with(ProductController::totalWin);
 
         router.POST().route("/totalLoss").with(ProductController::totalLoss);
 
@@ -133,11 +133,11 @@ public class Routes implements ApplicationRoutes {
 
         router.POST().route("/updateInAuction/{productId}").filters(CorsHandler.class).with(ProductController::updateInAuction);
 
+        router.POST().route("/getBidder/{productId}/{userId}").filters(CorsHandler.class).with(BidderController::getBidder);
 
+//        router.GET().route("/product/winner").with(BidderController::findBidderWithMaxBid);
 
-        router.GET().route("/product/winner").with(BidderController::findBidderWithMaxBid);
-
-        router.POST().route("/updateCurrentBid").with(BidderController::updateCurrentBid);
+        router.POST().route("/updateCurrentBid/{productId}/{userId}/{currentBid}").filters(CorsHandler.class).with(BidderController::updateCurrentBid);
 
         router.GET().route("/employee/validate/{email}/{password}").filters(CorsHandler.class).with(EmpController::validateUser);
 

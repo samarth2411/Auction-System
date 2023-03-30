@@ -5,6 +5,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.persist.Transactional;
 import dto.ProductDto;
+import models.Bidder;
 import models.Product;
 
 import javax.persistence.EntityManager;
@@ -19,6 +20,8 @@ public class ProductDao {
 
     @Inject
     Provider<EntityManager> entityManagerProvider;
+    @Inject
+    BidderDao bidderDao;
     @Transactional
     public Product AddProduct(ProductDto productDto) throws Exception{
 
@@ -132,20 +135,73 @@ public class ProductDao {
         }
 
     }
-
-    public Product inAuction(Long productId){
+    @Transactional
+    public String inAuction(Long productId){
         try{
             EntityManager em = entityManagerProvider.get();
-            TypedQuery<Product> q = em.createQuery("select p from Product p where p.id=:productId", Product.class);
-            List<Product> p = q.setParameter("productId", productId).getResultList();
-            if(p.size() != 0){
-                p.get(0).setInAuction(true);
-                return p.get(0);
+            Query q = em.createQuery("update Product p set p.inAuction=true where p.id=:productId");
+            int count = q.setParameter("productId", productId).executeUpdate();
+            if(count != 0){
+                // p.get(0).setInAuction(true);
+                return "Product Updates";
             }
             else{
                 System.out.println("Product does not exist");
             }
             return null;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    @Transactional
+    public void setWinner(String winner,Long productId){
+        try{
+            EntityManager em = entityManagerProvider.get();
+            Query q = em.createQuery("update Product p set p.winner=:winner where p.id=:productId");
+            q.setParameter("productId",productId).setParameter("winner",winner).executeUpdate();
+            System.out.println("The winner of the product "+productId+" is "+ winner);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            throw e;
+        }
+
+    }
+    @Transactional
+    public void pickWinner(){
+        try{
+            EntityManager em = entityManagerProvider.get();
+            Long date = System.currentTimeMillis();
+            Query namedQuery = em.createNamedQuery("ProductEntity.GetProductList", Product.class).setParameter("time",date);
+            List<Product> list = namedQuery.getResultList();
+            for (Product product : list) {
+                Bidder bidder = bidderDao.findBidderWithMaxBid(product.getId());
+                if(bidder!=null) {
+                    product.setWinner(bidder.getUserId());
+                }
+                product.setActive(false);
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
+    @Transactional
+    public void startBid(){
+        try{
+            EntityManager em = entityManagerProvider.get();
+            Long date = System.currentTimeMillis();
+            Query namedQuery = em.createNamedQuery("ProductEntity.setIsActive").setParameter("time",date);
+            List<Product> list = namedQuery.getResultList();
+            for (Product product : list) {
+                product.setActive(true);
+            }
+
         }
         catch (Exception e){
             e.printStackTrace();

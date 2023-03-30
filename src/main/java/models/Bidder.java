@@ -7,8 +7,10 @@ import javax.persistence.*;
 @NamedQueries({
         @NamedQuery(name = "Bidder.countBidderByUserId",query = "Select count(b) from Bidder b where b.userId=:userId"),
         @NamedQuery(name = "Bidder.findBiddersByProductId",query="SELECT b from Bidder b where b.productId=:productId order by b.currentBid DESC "),
-        @NamedQuery(name="Bidder.findBidderWithMaxBid",query = "select b from Bidder b where b.currentBid = (select max(currentBid) from Bidder)"),
+//        @NamedQuery(name="Bidder.findBidderWithMaxBid",query = "select b from Bidder b where b.currentBid = (select max(currentBid) from Bidder)"),
 //        @NamedQuery(name = "Bidder.changeBidder'sCurrentBid",query = "update Bidder set ")
+        @NamedQuery(name="Bidder.findBidderByUserIdAndProductId",query = "select b from Bidder b where b.userId=:userId and b.productId=:productId"),
+        @NamedQuery(name="Bidder.findMaxBid",query="select b from Bidder b where b.productId=:productId order by b.currentBid DESC")
 })
 public class Bidder{
 

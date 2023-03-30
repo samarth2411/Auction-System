@@ -40,7 +40,7 @@ public class ProductController {
         return Results.json().render(productDao.count());
     }
 
-    public Result totalWin(@Param("userId") String userId){
+    public Result totalWin(@PathParam("userId") String userId){
         Long winCount = productDao.winCount(userId);
         return Results.json().render(winCount);
     }
@@ -91,7 +91,7 @@ public class ProductController {
 
     public Result updateInAuction(@PathParam("productId") Long productId){
         try{
-            Product product = productDao.inAuction(productId);
+            String product = productDao.inAuction(productId);
             return Results.json().render(product);
         }
         catch (Exception e){

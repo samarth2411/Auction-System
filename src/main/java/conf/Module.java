@@ -49,10 +49,14 @@ public class Module extends AbstractModule {
     
     @Override
     protected void configure() {
-        bind(StartupActions.class);    
+        bind(StartupActions.class);
+        bind(ScheduledAction.class);
         
         install(new JpaModule(ninjaProperties));
         install(new MigrationClassicModule());
     }
+
+
+
 
 }

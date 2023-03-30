@@ -21,7 +21,7 @@ public class BidderController {
         return Results.json().render(bidder);
     }
 
-    public Result countTotalBids(@Param("userId") String userId){
+    public Result countTotalBids(@PathParam("userId") String userId){
         System.out.println("total bids");
         Long count = bidderDao.countBids(userId);
         return Results.json().render(count);
@@ -40,12 +40,25 @@ public class BidderController {
         }
     }
 
-    public Result findBidderWithMaxBid(){
-        try{
-            Bidder bidder  = bidderDao.findBidderWithMaxBid();
-            System.out.println("Bidder with max Bid Retreived");
-            return Results.json().render(bidder);
+//    public Result findBidderWithMaxBid(){
+//        try{
+//            Bidder bidder  = bidderDao.findBidderWithMaxBid();
+//            System.out.println("Bidder with max Bid Retreived");
+//            return Results.json().render(bidder);
+//
+//        }
+//        catch(Exception e){
+//            e.printStackTrace();
+//            return Results.badRequest().json().render("Bad Request");
+//        }
+//    }
 
+    public Result updateCurrentBid(@PathParam("productId") Long productId , @PathParam("userId") String userId ,
+                                   @PathParam("currentBid") Long currentBid){
+        try{
+          Bidder bidder =  bidderDao.updateCurrentBid(productId,userId,currentBid);
+            System.out.println("Current Bid update to "+currentBid);
+            return Results.json().render(bidder);
         }
         catch(Exception e){
             e.printStackTrace();
@@ -53,11 +66,10 @@ public class BidderController {
         }
     }
 
-    public Result updateCurrentBid(@Param("productId") Long productId , @Param("userId") String userId ,
-                                   @Param("currentBid") Long currentBid){
+    public Result getBidder(@PathParam("productId")Long productId, @PathParam("userId") String userId){
         try{
-          Bidder bidder =  bidderDao.updateCurrentBid(productId,userId,currentBid);
-            System.out.println("Current Bid update to "+currentBid);
+           Bidder bidder = bidderDao.getBidder(productId,userId);
+            System.out.println("Bidder is "+bidder);
             return Results.json().render(bidder);
         }
         catch(Exception e){
