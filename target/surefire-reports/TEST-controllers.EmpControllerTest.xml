@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="controllers.EmpControllerTest" time="9.395" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\Ecllipse\ninja2\target\test-classes;D:\Ecllipse\ninja2\target\classes;C:\Users\samar\.m2\repository\org\webjars\tinymce-jquery\4.0.16\tinymce-jquery-4.0.16.jar;C:\Users\samar\.m2\repository\org\webjars\jquery\2.1.3\jquery-2.1.3.jar;C:\Users\samar\.m2\repository\org\webjars\bootstrap\3.3.4\bootstrap-3.3.4.jar;C:\Users\samar\.m2\repository\com\h2database\h2\1.4.186\h2-1.4.186.jar;C:\Users\samar\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20190610.1\owasp-java-html-sanitizer-20190610.1.jar;C:\Users\samar\.m2\repository\com\google\guava\guava\27.1-jre\guava-27.1-jre.jar;C:\Users\samar\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\samar\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\samar\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\samar\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\samar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\samar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-standalone\6.9.0\ninja-standalone-6.9.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-servlet\6.9.0\ninja-servlet-6.9.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-websockets-jsr356\6.9.0\ninja-websockets-jsr356-6.9.0.jar;C:\Users\samar\.m2\repository\com\google\inject\extensions\guice-servlet\5.0.1\guice-servlet-5.0.1.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-server\9.4.44.v20210927\jetty-server-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-http\9.4.44.v20210927\jetty-http-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-io\9.4.44.v20210927\jetty-io-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-servlet\9.4.44.v20210927\jetty-servlet-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-security\9.4.44.v20210927\jetty-security-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-util-ajax\9.4.44.v20210927\jetty-util-ajax-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-xml\9.4.44.v20210927\jetty-xml-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-util\9.4.44.v20210927\jetty-util-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\javax-websocket-server-impl\9.4.44.v20210927\javax-websocket-server-impl-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\javax-websocket-client-impl\9.4.44.v20210927\javax-websocket-client-impl-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\javax\websocket\javax.websocket-client-api\1.0\javax.websocket-client-api-1.0.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-server\9.4.44.v20210927\websocket-server-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-servlet\9.4.44.v20210927\websocket-servlet-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\samar\.m2\repository\javax\websocket\javax.websocket-api\1.1\javax.websocket-api-1.1.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-db-classic\6.9.0\ninja-db-classic-6.9.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-core\6.9.0\ninja-core-6.9.0.jar;C:\Users\samar\.m2\repository\org\ocpsoft\prettytime\prettytime\4.0.2.Final\prettytime-4.0.2.Final.jar;C:\Users\samar\.m2\repository\joda-time\joda-time\2.10.1\joda-time-2.10.1.jar;C:\Users\samar\.m2\repository\com\google\inject\guice\5.0.1\guice-5.0.1.jar;C:\Users\samar\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\samar\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\samar\.m2\repository\com\google\inject\extensions\guice-assistedinject\5.0.1\guice-assistedinject-5.0.1.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.2\jackson-core-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\module\jackson-module-afterburner\2.12.2\jackson-module-afterburner-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.2\jackson-databind-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.2\jackson-datatype-jsr310-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.2\jackson-annotations-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.12.2\jackson-datatype-jdk8-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.12.2\jackson-datatype-joda-2.12.2.jar;C:\Users\samar\.m2\repository\org\freemarker\freemarker-gae\2.3.29\freemarker-gae-2.3.29.jar;C:\Users\samar\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\samar\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\samar\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\samar\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\samar\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.30\log4j-over-slf4j-1.7.30.jar;C:\Users\samar\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\samar\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\samar\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\samar\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.12.2\jackson-dataformat-xml-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.12.2\jackson-module-jaxb-annotations-2.12.2.jar;C:\Users\samar\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\samar\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\samar\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;C:\Users\samar\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.2.0\woodstox-core-5.2.0.jar;C:\Users\samar\.m2\repository\net\sf\ehcache\ehcache-core\2.6.11\ehcache-core-2.6.11.jar;C:\Users\samar\.m2\repository\net\spy\spymemcached\2.12.3\spymemcached-2.12.3.jar;C:\Users\samar\.m2\repository\org\flywaydb\flyway-core\8.2.2\flyway-core-8.2.2.jar;C:\Users\samar\.m2\repository\com\google\inject\extensions\guice-persist\5.0.1\guice-persist-5.0.1.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.8.Final\hibernate-entitymanager-4.3.8.Final.jar;C:\Users\samar\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-core\4.3.8.Final\hibernate-core-4.3.8.Final.jar;C:\Users\samar\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\samar\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\samar\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\samar\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.5.Final\hibernate-commons-annotations-4.0.5.Final.jar;C:\Users\samar\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\samar\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\samar\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-c3p0\4.3.8.Final\hibernate-c3p0-4.3.8.Final.jar;C:\Users\samar\.m2\repository\com\mchange\c3p0\0.9.2.1\c3p0-0.9.2.1.jar;C:\Users\samar\.m2\repository\com\mchange\mchange-commons-java\0.2.3.4\mchange-commons-java-0.2.3.4.jar;C:\Users\samar\.m2\repository\javax\xml\bind\jaxb-api\2.3.0\jaxb-api-2.3.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-test-utilities\6.9.0\ninja-test-utilities-6.9.0.jar;C:\Users\samar\.m2\repository\org\hamcrest\java-hamcrest\2.0.0.0\java-hamcrest-2.0.0.0.jar;C:\Users\samar\.m2\repository\org\mockito\mockito-core\3.8.0\mockito-core-3.8.0.jar;C:\Users\samar\.m2\repository\net\bytebuddy\byte-buddy\1.10.20\byte-buddy-1.10.20.jar;C:\Users\samar\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.20\byte-buddy-agent-1.10.20.jar;C:\Users\samar\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\samar\.m2\repository\org\fluentlenium\fluentlenium-junit\3.10.1\fluentlenium-junit-3.10.1.jar;C:\Users\samar\.m2\repository\org\fluentlenium\fluentlenium-core\3.10.1\fluentlenium-core-3.10.1.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\samar\.m2\repository\org\atteo\classindex\classindex\3.9\classindex-3.9.jar;C:\Users\samar\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\samar\.m2\repository\org\apache\maven\maven-model\3.6.3\maven-model-3.6.3.jar;C:\Users\samar\.m2\repository\org\codehaus\plexus\plexus-utils\3.2.1\plexus-utils-3.2.1.jar;C:\Users\samar\.m2\repository\io\appium\java-client\7.3.0\java-client-7.3.0.jar;C:\Users\samar\.m2\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;C:\Users\samar\.m2\repository\cglib\cglib\3.2.12\cglib-3.2.12.jar;C:\Users\samar\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\samar\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;C:\Users\samar\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;C:\Users\samar\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;C:\Users\samar\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\samar\.m2\repository\org\springframework\spring-context\5.1.8.RELEASE\spring-context-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-aop\5.1.8.RELEASE\spring-aop-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-beans\5.1.8.RELEASE\spring-beans-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-core\5.1.8.RELEASE\spring-core-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-jcl\5.1.8.RELEASE\spring-jcl-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-expression\5.1.8.RELEASE\spring-expression-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\samar\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.47.1\htmlunit-driver-2.47.1.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\samar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\samar\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\samar\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.47.1\htmlunit-2.47.1.jar;C:\Users\samar\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\samar\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.47.0\htmlunit-core-js-2.47.0.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.47.1\neko-htmlunit-2.47.1.jar;C:\Users\samar\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\samar\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\htmlunit-cssparser\1.7.0\htmlunit-cssparser-1.7.0.jar;C:\Users\samar\.m2\repository\commons-net\commons-net\3.7.2\commons-net-3.7.2.jar;C:\Users\samar\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\samar\.m2\repository\com\shapesecurity\salvation2\3.0.0\salvation2-3.0.0.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-client\9.4.44.v20210927\jetty-client-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.44.v20210927\websocket-client-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.44.v20210927\websocket-common-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.44.v20210927\websocket-api-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\samar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\samar\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\samar\.m2\repository\org\doctester\doctester-core\1.1.8\doctester-core-1.1.8.jar;C:\Users\samar\.m2\repository\com\devbliss\doctest\doctest\0.9.1\doctest-0.9.1.jar;C:\Users\samar\.m2\repository\de\devbliss\apitester\apitester\0.8.0\apitester-0.8.0.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson-xml-databind\0.6.2\jackson-xml-databind-0.6.2.jar;C:\Users\samar\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.2\jackson-mapper-asl-1.9.2.jar;C:\Users\samar\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.2\jackson-core-asl-1.9.2.jar;C:\Users\samar\.m2\repository\org\codehaus\jackson\jackson-xc\1.9.2\jackson-xc-1.9.2.jar;C:\Users\samar\.m2\repository\org\json\org.json\chargebee-1.0\org.json-chargebee-1.0.jar;C:\Users\samar\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\samar\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\samar\.m2\repository\org\postgresql\postgresql\42.2.22\postgresql-42.2.22.jar;C:\Users\samar\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-validator\4.3.1.Final\hibernate-validator-4.3.1.Final.jar;C:\Users\samar\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Users\samar\.m2\repository\org\jboss\logging\jboss-logging\3.1.0.CR2\jboss-logging-3.1.0.CR2.jar;C:\Users\samar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\samar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\samar\.m2\repository\org\mockito\mockito-all\1.10.19\mockito-all-1.10.19.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\samar\AppData\Local\Temp\surefire6397472450452961902\surefirebooter-20230406115239378_3.jar C:\Users\samar\AppData\Local\Temp\surefire6397472450452961902 2023-04-06T11-52-38_703-jvmRun1 surefire-20230406115239378_1tmp surefire_0-20230406115239378_2tmp"/>
+    <property name="surefire.test.class.path" value="D:\Ecllipse\ninja2\target\test-classes;D:\Ecllipse\ninja2\target\classes;C:\Users\samar\.m2\repository\org\webjars\tinymce-jquery\4.0.16\tinymce-jquery-4.0.16.jar;C:\Users\samar\.m2\repository\org\webjars\jquery\2.1.3\jquery-2.1.3.jar;C:\Users\samar\.m2\repository\org\webjars\bootstrap\3.3.4\bootstrap-3.3.4.jar;C:\Users\samar\.m2\repository\com\h2database\h2\1.4.186\h2-1.4.186.jar;C:\Users\samar\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20190610.1\owasp-java-html-sanitizer-20190610.1.jar;C:\Users\samar\.m2\repository\com\google\guava\guava\27.1-jre\guava-27.1-jre.jar;C:\Users\samar\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\samar\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\samar\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\samar\.m2\repository\com\google\errorprone\error_prone_annotations\2.2.0\error_prone_annotations-2.2.0.jar;C:\Users\samar\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\samar\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.17\animal-sniffer-annotations-1.17.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-standalone\6.9.0\ninja-standalone-6.9.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-servlet\6.9.0\ninja-servlet-6.9.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-websockets-jsr356\6.9.0\ninja-websockets-jsr356-6.9.0.jar;C:\Users\samar\.m2\repository\com\google\inject\extensions\guice-servlet\5.0.1\guice-servlet-5.0.1.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-server\9.4.44.v20210927\jetty-server-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-http\9.4.44.v20210927\jetty-http-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-io\9.4.44.v20210927\jetty-io-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-servlet\9.4.44.v20210927\jetty-servlet-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-security\9.4.44.v20210927\jetty-security-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-util-ajax\9.4.44.v20210927\jetty-util-ajax-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-xml\9.4.44.v20210927\jetty-xml-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-util\9.4.44.v20210927\jetty-util-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\javax-websocket-server-impl\9.4.44.v20210927\javax-websocket-server-impl-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\javax-websocket-client-impl\9.4.44.v20210927\javax-websocket-client-impl-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\javax\websocket\javax.websocket-client-api\1.0\javax.websocket-client-api-1.0.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-server\9.4.44.v20210927\websocket-server-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-servlet\9.4.44.v20210927\websocket-servlet-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\samar\.m2\repository\javax\websocket\javax.websocket-api\1.1\javax.websocket-api-1.1.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-db-classic\6.9.0\ninja-db-classic-6.9.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-core\6.9.0\ninja-core-6.9.0.jar;C:\Users\samar\.m2\repository\org\ocpsoft\prettytime\prettytime\4.0.2.Final\prettytime-4.0.2.Final.jar;C:\Users\samar\.m2\repository\joda-time\joda-time\2.10.1\joda-time-2.10.1.jar;C:\Users\samar\.m2\repository\com\google\inject\guice\5.0.1\guice-5.0.1.jar;C:\Users\samar\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\samar\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\samar\.m2\repository\com\google\inject\extensions\guice-assistedinject\5.0.1\guice-assistedinject-5.0.1.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.2\jackson-core-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\module\jackson-module-afterburner\2.12.2\jackson-module-afterburner-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.2\jackson-databind-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.2\jackson-datatype-jsr310-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.2\jackson-annotations-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.12.2\jackson-datatype-jdk8-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-joda\2.12.2\jackson-datatype-joda-2.12.2.jar;C:\Users\samar\.m2\repository\org\freemarker\freemarker-gae\2.3.29\freemarker-gae-2.3.29.jar;C:\Users\samar\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\samar\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\samar\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\samar\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\samar\.m2\repository\org\slf4j\log4j-over-slf4j\1.7.30\log4j-over-slf4j-1.7.30.jar;C:\Users\samar\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\samar\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\samar\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\samar\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.12.2\jackson-dataformat-xml-2.12.2.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.12.2\jackson-module-jaxb-annotations-2.12.2.jar;C:\Users\samar\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\samar\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\samar\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;C:\Users\samar\.m2\repository\com\fasterxml\woodstox\woodstox-core\5.2.0\woodstox-core-5.2.0.jar;C:\Users\samar\.m2\repository\net\sf\ehcache\ehcache-core\2.6.11\ehcache-core-2.6.11.jar;C:\Users\samar\.m2\repository\net\spy\spymemcached\2.12.3\spymemcached-2.12.3.jar;C:\Users\samar\.m2\repository\org\flywaydb\flyway-core\8.2.2\flyway-core-8.2.2.jar;C:\Users\samar\.m2\repository\com\google\inject\extensions\guice-persist\5.0.1\guice-persist-5.0.1.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.8.Final\hibernate-entitymanager-4.3.8.Final.jar;C:\Users\samar\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-core\4.3.8.Final\hibernate-core-4.3.8.Final.jar;C:\Users\samar\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\samar\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar;C:\Users\samar\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\samar\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.5.Final\hibernate-commons-annotations-4.0.5.Final.jar;C:\Users\samar\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\samar\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\samar\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-c3p0\4.3.8.Final\hibernate-c3p0-4.3.8.Final.jar;C:\Users\samar\.m2\repository\com\mchange\c3p0\0.9.2.1\c3p0-0.9.2.1.jar;C:\Users\samar\.m2\repository\com\mchange\mchange-commons-java\0.2.3.4\mchange-commons-java-0.2.3.4.jar;C:\Users\samar\.m2\repository\javax\xml\bind\jaxb-api\2.3.0\jaxb-api-2.3.0.jar;C:\Users\samar\.m2\repository\org\ninjaframework\ninja-test-utilities\6.9.0\ninja-test-utilities-6.9.0.jar;C:\Users\samar\.m2\repository\org\hamcrest\java-hamcrest\2.0.0.0\java-hamcrest-2.0.0.0.jar;C:\Users\samar\.m2\repository\org\mockito\mockito-core\3.8.0\mockito-core-3.8.0.jar;C:\Users\samar\.m2\repository\net\bytebuddy\byte-buddy\1.10.20\byte-buddy-1.10.20.jar;C:\Users\samar\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.20\byte-buddy-agent-1.10.20.jar;C:\Users\samar\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\samar\.m2\repository\org\fluentlenium\fluentlenium-junit\3.10.1\fluentlenium-junit-3.10.1.jar;C:\Users\samar\.m2\repository\org\fluentlenium\fluentlenium-core\3.10.1\fluentlenium-core-3.10.1.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\samar\.m2\repository\org\atteo\classindex\classindex\3.9\classindex-3.9.jar;C:\Users\samar\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar;C:\Users\samar\.m2\repository\org\apache\maven\maven-model\3.6.3\maven-model-3.6.3.jar;C:\Users\samar\.m2\repository\org\codehaus\plexus\plexus-utils\3.2.1\plexus-utils-3.2.1.jar;C:\Users\samar\.m2\repository\io\appium\java-client\7.3.0\java-client-7.3.0.jar;C:\Users\samar\.m2\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;C:\Users\samar\.m2\repository\cglib\cglib\3.2.12\cglib-3.2.12.jar;C:\Users\samar\.m2\repository\org\ow2\asm\asm\7.1\asm-7.1.jar;C:\Users\samar\.m2\repository\commons-validator\commons-validator\1.6\commons-validator-1.6.jar;C:\Users\samar\.m2\repository\commons-beanutils\commons-beanutils\1.9.2\commons-beanutils-1.9.2.jar;C:\Users\samar\.m2\repository\commons-digester\commons-digester\1.8.1\commons-digester-1.8.1.jar;C:\Users\samar\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\samar\.m2\repository\org\springframework\spring-context\5.1.8.RELEASE\spring-context-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-aop\5.1.8.RELEASE\spring-aop-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-beans\5.1.8.RELEASE\spring-beans-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-core\5.1.8.RELEASE\spring-core-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-jcl\5.1.8.RELEASE\spring-jcl-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\springframework\spring-expression\5.1.8.RELEASE\spring-expression-5.1.8.RELEASE.jar;C:\Users\samar\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\samar\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\htmlunit-driver\2.47.1\htmlunit-driver-2.47.1.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\samar\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\samar\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\samar\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\samar\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\htmlunit\2.47.1\htmlunit-2.47.1.jar;C:\Users\samar\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\samar\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\htmlunit-core-js\2.47.0\htmlunit-core-js-2.47.0.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\neko-htmlunit\2.47.1\neko-htmlunit-2.47.1.jar;C:\Users\samar\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\samar\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\samar\.m2\repository\net\sourceforge\htmlunit\htmlunit-cssparser\1.7.0\htmlunit-cssparser-1.7.0.jar;C:\Users\samar\.m2\repository\commons-net\commons-net\3.7.2\commons-net-3.7.2.jar;C:\Users\samar\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\samar\.m2\repository\com\shapesecurity\salvation2\3.0.0\salvation2-3.0.0.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\jetty-client\9.4.44.v20210927\jetty-client-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.4.44.v20210927\websocket-client-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.4.44.v20210927\websocket-common-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.4.44.v20210927\websocket-api-9.4.44.v20210927.jar;C:\Users\samar\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\samar\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\samar\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\samar\.m2\repository\org\doctester\doctester-core\1.1.8\doctester-core-1.1.8.jar;C:\Users\samar\.m2\repository\com\devbliss\doctest\doctest\0.9.1\doctest-0.9.1.jar;C:\Users\samar\.m2\repository\de\devbliss\apitester\apitester\0.8.0\apitester-0.8.0.jar;C:\Users\samar\.m2\repository\com\fasterxml\jackson-xml-databind\0.6.2\jackson-xml-databind-0.6.2.jar;C:\Users\samar\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.2\jackson-mapper-asl-1.9.2.jar;C:\Users\samar\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.2\jackson-core-asl-1.9.2.jar;C:\Users\samar\.m2\repository\org\codehaus\jackson\jackson-xc\1.9.2\jackson-xc-1.9.2.jar;C:\Users\samar\.m2\repository\org\json\org.json\chargebee-1.0\org.json-chargebee-1.0.jar;C:\Users\samar\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\samar\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\samar\.m2\repository\org\postgresql\postgresql\42.2.22\postgresql-42.2.22.jar;C:\Users\samar\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\samar\.m2\repository\org\hibernate\hibernate-validator\4.3.1.Final\hibernate-validator-4.3.1.Final.jar;C:\Users\samar\.m2\repository\javax\validation\validation-api\1.0.0.GA\validation-api-1.0.0.GA.jar;C:\Users\samar\.m2\repository\org\jboss\logging\jboss-logging\3.1.0.CR2\jboss-logging-3.1.0.CR2.jar;C:\Users\samar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\samar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\samar\.m2\repository\org\mockito\mockito-all\1.10.19\mockito-all-1.10.19.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\samar"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_202\jre"/>
+    <property name="basedir" value="D:\Ecllipse\ninja2"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\samar\AppData\Local\Temp\surefire6397472450452961902\surefirebooter-20230406115239378_3.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="samar"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\samar\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\samar\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="D:\Ecllipse\ninja2"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Users\samar\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\samar\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python311\Scripts;C:\Python311;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;E:\C Drive\apache-maven-3.9.0-bin\apache-maven-3.9.0\bin;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn;C:\Program Files\Microsoft SQL Server\160\Tools\Binn;C:\Program Files\Microsoft SQL Server\160\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;C:\Users\samar\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\samar\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\samar\AppData\Roaming\npm;C:\Users\samar\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="validate" classname="controllers.EmpControllerTest" time="5.829">
+    <system-out><![CDATA[11:52:40.934 [main] INFO  ninja.utils.NinjaModeHelper - Ninja is running in mode prod
+11:52:41.018 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1401ms to org.eclipse.jetty.util.log.Slf4jLog
+11:52:41.981 [main] WARN  o.e.j.server.handler.ContextHandler - Empty contextPath
+11:52:42.135 [main] INFO  ninja.standalone.NinjaJetty - Trying to start jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:42.136 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_202-b08
+11:52:42.176 [main] INFO  ninja.servlet.NinjaServletListener - Using JSR-356 websocket container ServerContainer@74971ed9{STARTED}
+11:52:42.183 [main] INFO  ninja.Bootstrap - Successfully configured Logback.
+11:52:42.184 [main] INFO  ninja.Bootstrap - Enabling Ninja classic configuration
+11:52:43.215 [main] INFO  ninja.utils.SwissKnife - Could not load file conf/messages_en.properties (not a bad thing necessarily, but I am returing null)
+11:52:43.215 [main] INFO  ninja.i18n.MessagesImpl - Did not find conf/messages_en.properties but it was specified in application.conf. Using default language instead.
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - Registered response template engines
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - application/javascript  =>  ninja.template.TemplateEngineJsonP
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - application/json        =>  ninja.template.TemplateEngineJson
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - application/xml         =>  ninja.template.TemplateEngineXml
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - text/html               =>  ninja.template.TemplateEngineFreemarker
+11:52:43.312 [main] INFO  n.template.TemplateEngineManagerImpl - text/plain              =>  ninja.template.TemplateEngineText
+11:52:43.328 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:43.328 [main] INFO  n.b.BodyParserEngineManagerImpl - Registered request bodyparser engines
+11:52:43.328 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:43.328 [main] INFO  n.b.BodyParserEngineManagerImpl - application/json                   =>  ninja.bodyparser.BodyParserEngineJson
+11:52:43.328 [main] INFO  n.b.BodyParserEngineManagerImpl - application/x-www-form-urlencoded  =>  ninja.bodyparser.BodyParserEnginePost
+11:52:43.328 [main] INFO  n.b.BodyParserEngineManagerImpl - application/xml                    =>  ninja.bodyparser.BodyParserEngineXml
+11:52:43.328 [main] INFO  n.b.BodyParserEngineManagerImpl - multipart/form-data                =>  ninja.bodyparser.BodyParserEngineMultipartPost
+11:52:43.329 [main] INFO  ninja.Bootstrap - Ninja injector started in 1142 ms.
+11:52:43.378 [main] WARN  ninja.params.ControllerMethodInvoker - Using deprecated non-strict mode for injection of parameters into controller (ninja.strict_argument_extractors = false). This mode will soon be removed from Ninja. Make sure you upgrade your application as soon as possible. More: https://www.ninjaframework.org/documentation/basic_concepts/controllers.html 'A note about null and Optional'.
+11:52:43.413 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:43.419 [main] INFO  ninja.RouterImpl - Registered routes
+11:52:43.419 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:43.419 [main] INFO  ninja.RouterImpl - POST    /employee/add                                        =>  controllers.EmpController::CreateUser
+11:52:43.419 [main] INFO  ninja.RouterImpl - POST    /product/add                                         =>  controllers.ProductController::CreateProduct
+11:52:43.419 [main] INFO  ninja.RouterImpl - GET     /notInAuctionProducts                                =>  controllers.ProductController::allNotInAuctionProducts
+11:52:43.420 [main] INFO  ninja.RouterImpl - GET     /product/count                                       =>  controllers.ProductController::count
+11:52:43.421 [main] INFO  ninja.RouterImpl - GET     /employeeCount                                       =>  controllers.EmpController::countAllUsers
+11:52:43.421 [main] INFO  ninja.RouterImpl - POST    /bidder/add                                          =>  controllers.BidderController::addBidder
+11:52:43.421 [main] INFO  ninja.RouterImpl - POST    /getBidders/{userId}                                 =>  controllers.BidderController::Bidders
+11:52:43.421 [main] INFO  ninja.RouterImpl - POST    /bidder/count/{userId}                               =>  controllers.BidderController::countTotalBids
+11:52:43.421 [main] INFO  ninja.RouterImpl - POST    /totalWins/{userId}                                  =>  controllers.ProductController::totalWin
+11:52:43.421 [main] INFO  ninja.RouterImpl - POST    /totalLoss                                           =>  controllers.ProductController::totalLoss
+11:52:43.423 [main] INFO  ninja.RouterImpl - GET     /inAuctionProducts                                   =>  controllers.ProductController::allInAuctionProducts
+11:52:43.423 [main] INFO  ninja.RouterImpl - GET     /isActiveProducts                                    =>  controllers.ProductController::isActiveProducts
+11:52:43.423 [main] INFO  ninja.RouterImpl - POST    /product/{id}                                        =>  controllers.ProductController::singleProductWithId
+11:52:43.423 [main] INFO  ninja.RouterImpl - POST    /bidders/{productId}                                 =>  controllers.BidderController::findBidder
+11:52:43.424 [main] INFO  ninja.RouterImpl - GET     /getUser                                             =>  controllers.EmpController::getUser
+11:52:43.424 [main] INFO  ninja.RouterImpl - POST    /employee/get/{email}                                =>  controllers.EmpController::getUserEmail
+11:52:43.424 [main] INFO  ninja.RouterImpl - GET     /bidder/getProducts/{userId}                         =>  controllers.BidderController::getProducts
+11:52:43.424 [main] INFO  ninja.RouterImpl - POST    /updateIsRejected/{productId}                        =>  controllers.ProductController::updateIsRejected
+11:52:43.424 [main] INFO  ninja.RouterImpl - POST    /updateInAuction/{productId}                         =>  controllers.ProductController::updateInAuction
+11:52:43.424 [main] INFO  ninja.RouterImpl - POST    /getBidder/{productId}/{userId}                      =>  controllers.BidderController::getBidder
+11:52:43.424 [main] INFO  ninja.RouterImpl - POST    /updateCurrentBid/{productId}/{userId}/{currentBid}  =>  controllers.BidderController::updateCurrentBid
+11:52:43.424 [main] INFO  ninja.RouterImpl - GET     /employee/validate/{email}/{password}                =>  controllers.EmpController::validateUser
+11:52:43.424 [main] INFO  ninja.RouterImpl - GET     /logout                                              =>  controllers.EmpController::logout
+11:52:43.425 [main] INFO  ninja.RouterImpl - GET     /getProducts/{owner}                                 =>  controllers.ProductController::getAllProducts
+11:52:43.426 [main] INFO  ninja.RouterImpl - GET     /assets/webjars/{fileName: .*}                       =>  ninja.AssetsController::serveWebJars
+11:52:43.426 [main] INFO  ninja.RouterImpl - GET     /assets/{fileName: .*}                               =>  ninja.AssetsController::serveStatic
+11:52:43.426 [main] INFO  ninja.RouterImpl - OPTIONS /.*                                                  =>  controllers.EmpController::indexOptions
+11:52:43.433 [main] INFO  ninja.NinjaDefault - 
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  https://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   6.9.0
+
+11:52:43.433 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Starting Ninja application...
+11:52:43.436 [main] INFO  n.migrations.MigrationEngineProvider - Using ninja.migrations.flyway.MigrationEngineFlyway as default implementation for ninja.migrations.MigrationEngine
+11:52:43.946 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:43.947 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:./h2_testDB (H2 1.4)
+11:52:44.003 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped pre-schema database level objects (execution time 00:00.001s)
+11:52:44.015 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.011s)
+11:52:44.019 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+11:52:44.020 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped post-schema database level objects (execution time 00:00.000s)
+11:52:44.104 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:44.133 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.023s)
+11:52:44.138 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+11:52:44.166 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+11:52:44.177 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1"
+11:52:44.198 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.034s)
+11:52:44.234 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:44.234 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:44.234 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:44.430 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: h2_test
+	...]
+11:52:44.494 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {4.3.8.Final}
+11:52:44.495 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+11:52:44.496 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+11:52:44.671 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+11:52:44.697 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+11:52:44.706 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH010002: C3P0 using driver: org.h2.Driver at URL: jdbc:h2:./h2_testDB
+11:52:44.707 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000046: Connection properties: {user=sa, password=****}
+11:52:44.707 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000006: Autocommit mode: false
+11:52:44.721 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+11:52:44.816 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.2.1 [built 20-March-2013 10:47:27 +0000; debug? true; trace: 10]
+11:52:44.898 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@21c9726c [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@36801a7e [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0ytavnncu1c1f7ah5f|f53db1a, idleConnectionTestPeriod -> 300, initialPoolSize -> 0, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 100, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@4d2e21ab [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|352bea0e, jdbcUrl -> jdbc:h2:./h2_testDB, properties -> {user=******, password=******} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|651a399, numHelperThreads -> 3 ]
+11:52:44.964 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:52:44.976 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+11:52:45.076 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:52:45.113 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 4.3.1.Final
+11:52:45.586 [main] INFO  ninja.scheduler.Scheduler - Scheduling method decideWinner on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:45.586 [main] INFO  ninja.scheduler.Scheduler - Scheduling method setActive on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:45.721 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application started in 2288ms
+11:52:45.730 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3e1ba156{/,null,AVAILABLE}
+11:52:45.762 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@384fc774{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:45.768 [main] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@1440a166(ninja-development,h=[ninja],a=[],w=[]) for SslContextFactory@74f6237[provider=null,keyStore=null,trustStore=null]
+11:52:45.842 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@415e0bcb{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:45.842 [main] INFO  org.eclipse.jetty.server.Server - Started @6225ms
+11:52:45.842 [main] INFO  ninja.standalone.NinjaJetty - Started jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:45.842 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:45.842 [main] INFO  ninja.standalone.NinjaJetty - Ninja application running at
+11:52:45.843 [main] INFO  ninja.standalone.NinjaJetty -  => http://localhost:1000
+11:52:45.843 [main] INFO  ninja.standalone.NinjaJetty -  => https://localhost:8443
+11:52:45.843 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:45.882 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Stopping Ninja application...
+11:52:45.885 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application stopped in 3ms
+11:52:45.885 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3e1ba156{/,null,STOPPED}
+11:52:45.885 [main] INFO  ninja.standalone.NinjaJetty - Trying to stop jetty on <all>:1000, 8443/ssl
+11:52:45.903 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@384fc774{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:45.906 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@415e0bcb{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:45.911 [main] INFO  ninja.standalone.NinjaJetty - Stopped jetty on <all>:1000, 8443/ssl
+]]></system-out>
+  </testcase>
+  <testcase name="count2" classname="controllers.EmpControllerTest" time="0.824">
+    <system-out><![CDATA[11:52:45.941 [main] INFO  ninja.utils.NinjaModeHelper - Ninja is running in mode prod
+11:52:46.243 [main] WARN  o.e.j.server.handler.ContextHandler - Empty contextPath
+11:52:46.245 [main] INFO  ninja.standalone.NinjaJetty - Trying to start jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:46.245 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_202-b08
+11:52:46.246 [main] INFO  ninja.servlet.NinjaServletListener - Using JSR-356 websocket container ServerContainer@56587330{STARTED}
+11:52:46.246 [main] INFO  ninja.Bootstrap - Successfully configured Logback.
+11:52:46.247 [main] INFO  ninja.Bootstrap - Enabling Ninja classic configuration
+11:52:46.325 [main] INFO  ninja.utils.SwissKnife - Could not load file conf/messages_en.properties (not a bad thing necessarily, but I am returing null)
+11:52:46.325 [main] INFO  ninja.i18n.MessagesImpl - Did not find conf/messages_en.properties but it was specified in application.conf. Using default language instead.
+11:52:46.328 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:46.329 [main] INFO  n.template.TemplateEngineManagerImpl - Registered response template engines
+11:52:46.329 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:46.329 [main] INFO  n.template.TemplateEngineManagerImpl - application/javascript  =>  ninja.template.TemplateEngineJsonP
+11:52:46.329 [main] INFO  n.template.TemplateEngineManagerImpl - application/json        =>  ninja.template.TemplateEngineJson
+11:52:46.329 [main] INFO  n.template.TemplateEngineManagerImpl - application/xml         =>  ninja.template.TemplateEngineXml
+11:52:46.329 [main] INFO  n.template.TemplateEngineManagerImpl - text/html               =>  ninja.template.TemplateEngineFreemarker
+11:52:46.329 [main] INFO  n.template.TemplateEngineManagerImpl - text/plain              =>  ninja.template.TemplateEngineText
+11:52:46.330 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:46.330 [main] INFO  n.b.BodyParserEngineManagerImpl - Registered request bodyparser engines
+11:52:46.331 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:46.331 [main] INFO  n.b.BodyParserEngineManagerImpl - application/json                   =>  ninja.bodyparser.BodyParserEngineJson
+11:52:46.331 [main] INFO  n.b.BodyParserEngineManagerImpl - application/x-www-form-urlencoded  =>  ninja.bodyparser.BodyParserEnginePost
+11:52:46.331 [main] INFO  n.b.BodyParserEngineManagerImpl - application/xml                    =>  ninja.bodyparser.BodyParserEngineXml
+11:52:46.331 [main] INFO  n.b.BodyParserEngineManagerImpl - multipart/form-data                =>  ninja.bodyparser.BodyParserEngineMultipartPost
+11:52:46.331 [main] INFO  ninja.Bootstrap - Ninja injector started in 84 ms.
+11:52:46.344 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:46.344 [main] INFO  ninja.RouterImpl - Registered routes
+11:52:46.344 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /employee/add                                        =>  controllers.EmpController::CreateUser
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /product/add                                         =>  controllers.ProductController::CreateProduct
+11:52:46.344 [main] INFO  ninja.RouterImpl - GET     /notInAuctionProducts                                =>  controllers.ProductController::allNotInAuctionProducts
+11:52:46.344 [main] INFO  ninja.RouterImpl - GET     /product/count                                       =>  controllers.ProductController::count
+11:52:46.344 [main] INFO  ninja.RouterImpl - GET     /employeeCount                                       =>  controllers.EmpController::countAllUsers
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /bidder/add                                          =>  controllers.BidderController::addBidder
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /getBidders/{userId}                                 =>  controllers.BidderController::Bidders
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /bidder/count/{userId}                               =>  controllers.BidderController::countTotalBids
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /totalWins/{userId}                                  =>  controllers.ProductController::totalWin
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /totalLoss                                           =>  controllers.ProductController::totalLoss
+11:52:46.344 [main] INFO  ninja.RouterImpl - GET     /inAuctionProducts                                   =>  controllers.ProductController::allInAuctionProducts
+11:52:46.344 [main] INFO  ninja.RouterImpl - GET     /isActiveProducts                                    =>  controllers.ProductController::isActiveProducts
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /product/{id}                                        =>  controllers.ProductController::singleProductWithId
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /bidders/{productId}                                 =>  controllers.BidderController::findBidder
+11:52:46.344 [main] INFO  ninja.RouterImpl - GET     /getUser                                             =>  controllers.EmpController::getUser
+11:52:46.344 [main] INFO  ninja.RouterImpl - POST    /employee/get/{email}                                =>  controllers.EmpController::getUserEmail
+11:52:46.345 [main] INFO  ninja.RouterImpl - GET     /bidder/getProducts/{userId}                         =>  controllers.BidderController::getProducts
+11:52:46.345 [main] INFO  ninja.RouterImpl - POST    /updateIsRejected/{productId}                        =>  controllers.ProductController::updateIsRejected
+11:52:46.345 [main] INFO  ninja.RouterImpl - POST    /updateInAuction/{productId}                         =>  controllers.ProductController::updateInAuction
+11:52:46.345 [main] INFO  ninja.RouterImpl - POST    /getBidder/{productId}/{userId}                      =>  controllers.BidderController::getBidder
+11:52:46.345 [main] INFO  ninja.RouterImpl - POST    /updateCurrentBid/{productId}/{userId}/{currentBid}  =>  controllers.BidderController::updateCurrentBid
+11:52:46.345 [main] INFO  ninja.RouterImpl - GET     /employee/validate/{email}/{password}                =>  controllers.EmpController::validateUser
+11:52:46.345 [main] INFO  ninja.RouterImpl - GET     /logout                                              =>  controllers.EmpController::logout
+11:52:46.345 [main] INFO  ninja.RouterImpl - GET     /getProducts/{owner}                                 =>  controllers.ProductController::getAllProducts
+11:52:46.345 [main] INFO  ninja.RouterImpl - GET     /assets/webjars/{fileName: .*}                       =>  ninja.AssetsController::serveWebJars
+11:52:46.345 [main] INFO  ninja.RouterImpl - GET     /assets/{fileName: .*}                               =>  ninja.AssetsController::serveStatic
+11:52:46.345 [main] INFO  ninja.RouterImpl - OPTIONS /.*                                                  =>  controllers.EmpController::indexOptions
+11:52:46.346 [main] INFO  ninja.NinjaDefault - 
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  https://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   6.9.0
+
+11:52:46.346 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Starting Ninja application...
+11:52:46.347 [main] INFO  n.migrations.MigrationEngineProvider - Using ninja.migrations.flyway.MigrationEngineFlyway as default implementation for ninja.migrations.MigrationEngine
+11:52:46.365 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:46.365 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:./h2_testDB (H2 1.4)
+11:52:46.368 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+11:52:46.372 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.003s)
+11:52:46.373 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+11:52:46.373 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped post-schema database level objects (execution time 00:00.000s)
+11:52:46.435 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:46.442 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.002s)
+11:52:46.446 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+11:52:46.463 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+11:52:46.476 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1"
+11:52:46.503 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.042s)
+11:52:46.521 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:46.521 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:46.521 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:46.541 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: h2_test
+	...]
+11:52:46.560 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+11:52:46.560 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH010002: C3P0 using driver: org.h2.Driver at URL: jdbc:h2:./h2_testDB
+11:52:46.560 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000046: Connection properties: {user=sa, password=****}
+11:52:46.561 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000006: Autocommit mode: false
+11:52:46.609 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@7edceda0 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@41efb360 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0ytavnncu1c1f7ah5f|1980962c, idleConnectionTestPeriod -> 300, initialPoolSize -> 0, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 100, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@9de50e5 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|6dde8046, jdbcUrl -> jdbc:h2:./h2_testDB, properties -> {user=******, password=******} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|71529154, numHelperThreads -> 3 ]
+11:52:46.623 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:52:46.623 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+11:52:46.630 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:52:46.696 [main] INFO  ninja.scheduler.Scheduler - Scheduling method decideWinner on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:46.696 [main] INFO  ninja.scheduler.Scheduler - Scheduling method setActive on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:46.700 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application started in 354ms
+11:52:46.700 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2e66541a{/,null,AVAILABLE}
+11:52:46.703 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@6eb06667{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:46.703 [main] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@6ac7e58e(ninja-development,h=[ninja],a=[],w=[]) for SslContextFactory@d325e75[provider=null,keyStore=null,trustStore=null]
+11:52:46.750 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4c8ab21f{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:46.750 [main] INFO  org.eclipse.jetty.server.Server - Started @7133ms
+11:52:46.750 [main] INFO  ninja.standalone.NinjaJetty - Started jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:46.750 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:46.750 [main] INFO  ninja.standalone.NinjaJetty - Ninja application running at
+11:52:46.750 [main] INFO  ninja.standalone.NinjaJetty -  => http://localhost:1000
+11:52:46.750 [main] INFO  ninja.standalone.NinjaJetty -  => https://localhost:8443
+11:52:46.750 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+Counted All the Users
+11:52:46.751 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Stopping Ninja application...
+11:52:46.752 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application stopped in 1ms
+11:52:46.752 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2e66541a{/,null,STOPPED}
+11:52:46.752 [main] INFO  ninja.standalone.NinjaJetty - Trying to stop jetty on <all>:1000, 8443/ssl
+11:52:46.755 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@6eb06667{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:46.756 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4c8ab21f{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:46.757 [main] INFO  ninja.standalone.NinjaJetty - Stopped jetty on <all>:1000, 8443/ssl
+]]></system-out>
+  </testcase>
+  <testcase name="validate2" classname="controllers.EmpControllerTest" time="0.622">
+    <system-out><![CDATA[11:52:46.766 [main] INFO  ninja.utils.NinjaModeHelper - Ninja is running in mode prod
+11:52:47.025 [main] WARN  o.e.j.server.handler.ContextHandler - Empty contextPath
+11:52:47.027 [main] INFO  ninja.standalone.NinjaJetty - Trying to start jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:47.027 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_202-b08
+11:52:47.028 [main] INFO  ninja.servlet.NinjaServletListener - Using JSR-356 websocket container ServerContainer@5063fdd{STARTED}
+11:52:47.028 [main] INFO  ninja.Bootstrap - Successfully configured Logback.
+11:52:47.028 [main] INFO  ninja.Bootstrap - Enabling Ninja classic configuration
+11:52:47.115 [main] INFO  ninja.utils.SwissKnife - Could not load file conf/messages_en.properties (not a bad thing necessarily, but I am returing null)
+11:52:47.115 [main] INFO  ninja.i18n.MessagesImpl - Did not find conf/messages_en.properties but it was specified in application.conf. Using default language instead.
+11:52:47.119 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:47.119 [main] INFO  n.template.TemplateEngineManagerImpl - Registered response template engines
+11:52:47.119 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:47.119 [main] INFO  n.template.TemplateEngineManagerImpl - application/javascript  =>  ninja.template.TemplateEngineJsonP
+11:52:47.119 [main] INFO  n.template.TemplateEngineManagerImpl - application/json        =>  ninja.template.TemplateEngineJson
+11:52:47.119 [main] INFO  n.template.TemplateEngineManagerImpl - application/xml         =>  ninja.template.TemplateEngineXml
+11:52:47.119 [main] INFO  n.template.TemplateEngineManagerImpl - text/html               =>  ninja.template.TemplateEngineFreemarker
+11:52:47.120 [main] INFO  n.template.TemplateEngineManagerImpl - text/plain              =>  ninja.template.TemplateEngineText
+11:52:47.120 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:47.120 [main] INFO  n.b.BodyParserEngineManagerImpl - Registered request bodyparser engines
+11:52:47.120 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:47.121 [main] INFO  n.b.BodyParserEngineManagerImpl - application/json                   =>  ninja.bodyparser.BodyParserEngineJson
+11:52:47.121 [main] INFO  n.b.BodyParserEngineManagerImpl - application/x-www-form-urlencoded  =>  ninja.bodyparser.BodyParserEnginePost
+11:52:47.121 [main] INFO  n.b.BodyParserEngineManagerImpl - application/xml                    =>  ninja.bodyparser.BodyParserEngineXml
+11:52:47.121 [main] INFO  n.b.BodyParserEngineManagerImpl - multipart/form-data                =>  ninja.bodyparser.BodyParserEngineMultipartPost
+11:52:47.121 [main] INFO  ninja.Bootstrap - Ninja injector started in 92 ms.
+11:52:47.128 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:47.129 [main] INFO  ninja.RouterImpl - Registered routes
+11:52:47.129 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /employee/add                                        =>  controllers.EmpController::CreateUser
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /product/add                                         =>  controllers.ProductController::CreateProduct
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /notInAuctionProducts                                =>  controllers.ProductController::allNotInAuctionProducts
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /product/count                                       =>  controllers.ProductController::count
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /employeeCount                                       =>  controllers.EmpController::countAllUsers
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /bidder/add                                          =>  controllers.BidderController::addBidder
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /getBidders/{userId}                                 =>  controllers.BidderController::Bidders
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /bidder/count/{userId}                               =>  controllers.BidderController::countTotalBids
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /totalWins/{userId}                                  =>  controllers.ProductController::totalWin
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /totalLoss                                           =>  controllers.ProductController::totalLoss
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /inAuctionProducts                                   =>  controllers.ProductController::allInAuctionProducts
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /isActiveProducts                                    =>  controllers.ProductController::isActiveProducts
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /product/{id}                                        =>  controllers.ProductController::singleProductWithId
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /bidders/{productId}                                 =>  controllers.BidderController::findBidder
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /getUser                                             =>  controllers.EmpController::getUser
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /employee/get/{email}                                =>  controllers.EmpController::getUserEmail
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /bidder/getProducts/{userId}                         =>  controllers.BidderController::getProducts
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /updateIsRejected/{productId}                        =>  controllers.ProductController::updateIsRejected
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /updateInAuction/{productId}                         =>  controllers.ProductController::updateInAuction
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /getBidder/{productId}/{userId}                      =>  controllers.BidderController::getBidder
+11:52:47.129 [main] INFO  ninja.RouterImpl - POST    /updateCurrentBid/{productId}/{userId}/{currentBid}  =>  controllers.BidderController::updateCurrentBid
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /employee/validate/{email}/{password}                =>  controllers.EmpController::validateUser
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /logout                                              =>  controllers.EmpController::logout
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /getProducts/{owner}                                 =>  controllers.ProductController::getAllProducts
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /assets/webjars/{fileName: .*}                       =>  ninja.AssetsController::serveWebJars
+11:52:47.129 [main] INFO  ninja.RouterImpl - GET     /assets/{fileName: .*}                               =>  ninja.AssetsController::serveStatic
+11:52:47.129 [main] INFO  ninja.RouterImpl - OPTIONS /.*                                                  =>  controllers.EmpController::indexOptions
+11:52:47.130 [main] INFO  ninja.NinjaDefault - 
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  https://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   6.9.0
+
+11:52:47.130 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Starting Ninja application...
+11:52:47.130 [main] INFO  n.migrations.MigrationEngineProvider - Using ninja.migrations.flyway.MigrationEngineFlyway as default implementation for ninja.migrations.MigrationEngine
+11:52:47.143 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:47.143 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:./h2_testDB (H2 1.4)
+11:52:47.145 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+11:52:47.152 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.005s)
+11:52:47.152 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+11:52:47.153 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped post-schema database level objects (execution time 00:00.000s)
+11:52:47.171 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:47.175 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.001s)
+11:52:47.175 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+11:52:47.180 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+11:52:47.183 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1"
+11:52:47.190 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.009s)
+11:52:47.191 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:47.191 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:47.191 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:47.206 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: h2_test
+	...]
+11:52:47.221 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+11:52:47.221 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH010002: C3P0 using driver: org.h2.Driver at URL: jdbc:h2:./h2_testDB
+11:52:47.221 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000046: Connection properties: {user=sa, password=****}
+11:52:47.221 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000006: Autocommit mode: false
+11:52:47.256 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@e9f650ef [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@979fddc4 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0ytavnncu1c1f7ah5f|2a739459, idleConnectionTestPeriod -> 300, initialPoolSize -> 0, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 100, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@885f103a [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|50274fbd, jdbcUrl -> jdbc:h2:./h2_testDB, properties -> {user=******, password=******} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|fb054f4, numHelperThreads -> 3 ]
+11:52:47.267 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:52:47.267 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+11:52:47.275 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:52:47.321 [main] INFO  ninja.scheduler.Scheduler - Scheduling method decideWinner on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:47.321 [main] INFO  ninja.scheduler.Scheduler - Scheduling method setActive on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:47.324 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application started in 194ms
+11:52:47.325 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@62a473aa{/,null,AVAILABLE}
+11:52:47.327 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2542240d{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:47.328 [main] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@15ff0f79(ninja-development,h=[ninja],a=[],w=[]) for SslContextFactory@15e0b2f5[provider=null,keyStore=null,trustStore=null]
+11:52:47.375 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@380191d7{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:47.375 [main] INFO  org.eclipse.jetty.server.Server - Started @7759ms
+11:52:47.375 [main] INFO  ninja.standalone.NinjaJetty - Started jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:47.375 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:47.375 [main] INFO  ninja.standalone.NinjaJetty - Ninja application running at
+11:52:47.375 [main] INFO  ninja.standalone.NinjaJetty -  => http://localhost:1000
+11:52:47.375 [main] INFO  ninja.standalone.NinjaJetty -  => https://localhost:8443
+11:52:47.375 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:47.377 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Stopping Ninja application...
+11:52:47.378 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application stopped in 1ms
+11:52:47.378 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@62a473aa{/,null,STOPPED}
+11:52:47.378 [main] INFO  ninja.standalone.NinjaJetty - Trying to stop jetty on <all>:1000, 8443/ssl
+11:52:47.383 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@2542240d{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:47.385 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@380191d7{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:47.386 [main] INFO  ninja.standalone.NinjaJetty - Stopped jetty on <all>:1000, 8443/ssl
+]]></system-out>
+  </testcase>
+  <testcase name="getUser" classname="controllers.EmpControllerTest" time="0.666">
+    <system-out><![CDATA[11:52:47.390 [main] INFO  ninja.utils.NinjaModeHelper - Ninja is running in mode prod
+11:52:47.648 [main] WARN  o.e.j.server.handler.ContextHandler - Empty contextPath
+11:52:47.650 [main] INFO  ninja.standalone.NinjaJetty - Trying to start jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:47.650 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_202-b08
+11:52:47.652 [main] INFO  ninja.servlet.NinjaServletListener - Using JSR-356 websocket container ServerContainer@2b9c0a0e{STARTED}
+11:52:47.652 [main] INFO  ninja.Bootstrap - Successfully configured Logback.
+11:52:47.652 [main] INFO  ninja.Bootstrap - Enabling Ninja classic configuration
+11:52:47.701 [main] INFO  ninja.utils.SwissKnife - Could not load file conf/messages_en.properties (not a bad thing necessarily, but I am returing null)
+11:52:47.701 [main] INFO  ninja.i18n.MessagesImpl - Did not find conf/messages_en.properties but it was specified in application.conf. Using default language instead.
+11:52:47.702 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:47.703 [main] INFO  n.template.TemplateEngineManagerImpl - Registered response template engines
+11:52:47.703 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:47.703 [main] INFO  n.template.TemplateEngineManagerImpl - application/javascript  =>  ninja.template.TemplateEngineJsonP
+11:52:47.703 [main] INFO  n.template.TemplateEngineManagerImpl - application/json        =>  ninja.template.TemplateEngineJson
+11:52:47.703 [main] INFO  n.template.TemplateEngineManagerImpl - application/xml         =>  ninja.template.TemplateEngineXml
+11:52:47.703 [main] INFO  n.template.TemplateEngineManagerImpl - text/html               =>  ninja.template.TemplateEngineFreemarker
+11:52:47.703 [main] INFO  n.template.TemplateEngineManagerImpl - text/plain              =>  ninja.template.TemplateEngineText
+11:52:47.704 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:47.704 [main] INFO  n.b.BodyParserEngineManagerImpl - Registered request bodyparser engines
+11:52:47.704 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:47.704 [main] INFO  n.b.BodyParserEngineManagerImpl - application/json                   =>  ninja.bodyparser.BodyParserEngineJson
+11:52:47.704 [main] INFO  n.b.BodyParserEngineManagerImpl - application/x-www-form-urlencoded  =>  ninja.bodyparser.BodyParserEnginePost
+11:52:47.704 [main] INFO  n.b.BodyParserEngineManagerImpl - application/xml                    =>  ninja.bodyparser.BodyParserEngineXml
+11:52:47.704 [main] INFO  n.b.BodyParserEngineManagerImpl - multipart/form-data                =>  ninja.bodyparser.BodyParserEngineMultipartPost
+11:52:47.704 [main] INFO  ninja.Bootstrap - Ninja injector started in 51 ms.
+11:52:47.710 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:47.711 [main] INFO  ninja.RouterImpl - Registered routes
+11:52:47.711 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /employee/add                                        =>  controllers.EmpController::CreateUser
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /product/add                                         =>  controllers.ProductController::CreateProduct
+11:52:47.711 [main] INFO  ninja.RouterImpl - GET     /notInAuctionProducts                                =>  controllers.ProductController::allNotInAuctionProducts
+11:52:47.711 [main] INFO  ninja.RouterImpl - GET     /product/count                                       =>  controllers.ProductController::count
+11:52:47.711 [main] INFO  ninja.RouterImpl - GET     /employeeCount                                       =>  controllers.EmpController::countAllUsers
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /bidder/add                                          =>  controllers.BidderController::addBidder
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /getBidders/{userId}                                 =>  controllers.BidderController::Bidders
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /bidder/count/{userId}                               =>  controllers.BidderController::countTotalBids
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /totalWins/{userId}                                  =>  controllers.ProductController::totalWin
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /totalLoss                                           =>  controllers.ProductController::totalLoss
+11:52:47.711 [main] INFO  ninja.RouterImpl - GET     /inAuctionProducts                                   =>  controllers.ProductController::allInAuctionProducts
+11:52:47.711 [main] INFO  ninja.RouterImpl - GET     /isActiveProducts                                    =>  controllers.ProductController::isActiveProducts
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /product/{id}                                        =>  controllers.ProductController::singleProductWithId
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /bidders/{productId}                                 =>  controllers.BidderController::findBidder
+11:52:47.711 [main] INFO  ninja.RouterImpl - GET     /getUser                                             =>  controllers.EmpController::getUser
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /employee/get/{email}                                =>  controllers.EmpController::getUserEmail
+11:52:47.711 [main] INFO  ninja.RouterImpl - GET     /bidder/getProducts/{userId}                         =>  controllers.BidderController::getProducts
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /updateIsRejected/{productId}                        =>  controllers.ProductController::updateIsRejected
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /updateInAuction/{productId}                         =>  controllers.ProductController::updateInAuction
+11:52:47.711 [main] INFO  ninja.RouterImpl - POST    /getBidder/{productId}/{userId}                      =>  controllers.BidderController::getBidder
+11:52:47.712 [main] INFO  ninja.RouterImpl - POST    /updateCurrentBid/{productId}/{userId}/{currentBid}  =>  controllers.BidderController::updateCurrentBid
+11:52:47.712 [main] INFO  ninja.RouterImpl - GET     /employee/validate/{email}/{password}                =>  controllers.EmpController::validateUser
+11:52:47.712 [main] INFO  ninja.RouterImpl - GET     /logout                                              =>  controllers.EmpController::logout
+11:52:47.712 [main] INFO  ninja.RouterImpl - GET     /getProducts/{owner}                                 =>  controllers.ProductController::getAllProducts
+11:52:47.712 [main] INFO  ninja.RouterImpl - GET     /assets/webjars/{fileName: .*}                       =>  ninja.AssetsController::serveWebJars
+11:52:47.712 [main] INFO  ninja.RouterImpl - GET     /assets/{fileName: .*}                               =>  ninja.AssetsController::serveStatic
+11:52:47.712 [main] INFO  ninja.RouterImpl - OPTIONS /.*                                                  =>  controllers.EmpController::indexOptions
+11:52:47.712 [main] INFO  ninja.NinjaDefault - 
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  https://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   6.9.0
+
+11:52:47.713 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Starting Ninja application...
+11:52:47.713 [main] INFO  n.migrations.MigrationEngineProvider - Using ninja.migrations.flyway.MigrationEngineFlyway as default implementation for ninja.migrations.MigrationEngine
+11:52:47.737 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:47.737 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:./h2_testDB (H2 1.4)
+11:52:47.740 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+11:52:47.746 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.006s)
+11:52:47.748 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+11:52:47.748 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped post-schema database level objects (execution time 00:00.000s)
+11:52:47.778 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:47.783 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.001s)
+11:52:47.785 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+11:52:47.791 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+11:52:47.796 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1"
+11:52:47.804 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.015s)
+11:52:47.818 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:47.819 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:47.819 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:47.838 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: h2_test
+	...]
+11:52:47.862 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+11:52:47.862 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH010002: C3P0 using driver: org.h2.Driver at URL: jdbc:h2:./h2_testDB
+11:52:47.862 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000046: Connection properties: {user=sa, password=****}
+11:52:47.862 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000006: Autocommit mode: false
+11:52:47.905 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@26a7a1b7 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@329d5bfa [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0ytavnncu1c1f7ah5f|10679da, idleConnectionTestPeriod -> 300, initialPoolSize -> 0, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 100, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@f7d74e71 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|5c646c59, jdbcUrl -> jdbc:h2:./h2_testDB, properties -> {user=******, password=******} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|39d87c5f, numHelperThreads -> 3 ]
+11:52:47.925 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:52:47.925 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+11:52:47.932 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:52:47.984 [main] INFO  ninja.scheduler.Scheduler - Scheduling method decideWinner on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:47.984 [main] INFO  ninja.scheduler.Scheduler - Scheduling method setActive on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:47.988 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application started in 275ms
+11:52:47.988 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@69d1227f{/,null,AVAILABLE}
+11:52:47.991 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@799f8528{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:47.992 [main] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@1b3a95c1(ninja-development,h=[ninja],a=[],w=[]) for SslContextFactory@65f2a574[provider=null,keyStore=null,trustStore=null]
+11:52:48.044 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2c14eb95{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:48.044 [main] INFO  org.eclipse.jetty.server.Server - Started @8427ms
+11:52:48.044 [main] INFO  ninja.standalone.NinjaJetty - Started jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:48.044 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:48.044 [main] INFO  ninja.standalone.NinjaJetty - Ninja application running at
+11:52:48.044 [main] INFO  ninja.standalone.NinjaJetty -  => http://localhost:1000
+11:52:48.044 [main] INFO  ninja.standalone.NinjaJetty -  => https://localhost:8443
+11:52:48.045 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:48.047 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Stopping Ninja application...
+11:52:48.048 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application stopped in 1ms
+11:52:48.048 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@69d1227f{/,null,STOPPED}
+11:52:48.049 [main] INFO  ninja.standalone.NinjaJetty - Trying to stop jetty on <all>:1000, 8443/ssl
+11:52:48.051 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@799f8528{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:48.052 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@2c14eb95{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:48.053 [main] INFO  ninja.standalone.NinjaJetty - Stopped jetty on <all>:1000, 8443/ssl
+]]></system-out>
+  </testcase>
+  <testcase name="count" classname="controllers.EmpControllerTest" time="0.689">
+    <system-out><![CDATA[11:52:48.057 [main] INFO  ninja.utils.NinjaModeHelper - Ninja is running in mode prod
+11:52:48.353 [main] WARN  o.e.j.server.handler.ContextHandler - Empty contextPath
+11:52:48.355 [main] INFO  ninja.standalone.NinjaJetty - Trying to start jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:48.355 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_202-b08
+11:52:48.357 [main] INFO  ninja.servlet.NinjaServletListener - Using JSR-356 websocket container ServerContainer@2a10a1e2{STARTED}
+11:52:48.357 [main] INFO  ninja.Bootstrap - Successfully configured Logback.
+11:52:48.357 [main] INFO  ninja.Bootstrap - Enabling Ninja classic configuration
+11:52:48.410 [main] INFO  ninja.utils.SwissKnife - Could not load file conf/messages_en.properties (not a bad thing necessarily, but I am returing null)
+11:52:48.410 [main] INFO  ninja.i18n.MessagesImpl - Did not find conf/messages_en.properties but it was specified in application.conf. Using default language instead.
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - Registered response template engines
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - application/javascript  =>  ninja.template.TemplateEngineJsonP
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - application/json        =>  ninja.template.TemplateEngineJson
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - application/xml         =>  ninja.template.TemplateEngineXml
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - text/html               =>  ninja.template.TemplateEngineFreemarker
+11:52:48.412 [main] INFO  n.template.TemplateEngineManagerImpl - text/plain              =>  ninja.template.TemplateEngineText
+11:52:48.413 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:48.413 [main] INFO  n.b.BodyParserEngineManagerImpl - Registered request bodyparser engines
+11:52:48.413 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:48.413 [main] INFO  n.b.BodyParserEngineManagerImpl - application/json                   =>  ninja.bodyparser.BodyParserEngineJson
+11:52:48.413 [main] INFO  n.b.BodyParserEngineManagerImpl - application/x-www-form-urlencoded  =>  ninja.bodyparser.BodyParserEnginePost
+11:52:48.413 [main] INFO  n.b.BodyParserEngineManagerImpl - application/xml                    =>  ninja.bodyparser.BodyParserEngineXml
+11:52:48.413 [main] INFO  n.b.BodyParserEngineManagerImpl - multipart/form-data                =>  ninja.bodyparser.BodyParserEngineMultipartPost
+11:52:48.413 [main] INFO  ninja.Bootstrap - Ninja injector started in 55 ms.
+11:52:48.421 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:48.421 [main] INFO  ninja.RouterImpl - Registered routes
+11:52:48.421 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:48.421 [main] INFO  ninja.RouterImpl - POST    /employee/add                                        =>  controllers.EmpController::CreateUser
+11:52:48.421 [main] INFO  ninja.RouterImpl - POST    /product/add                                         =>  controllers.ProductController::CreateProduct
+11:52:48.421 [main] INFO  ninja.RouterImpl - GET     /notInAuctionProducts                                =>  controllers.ProductController::allNotInAuctionProducts
+11:52:48.421 [main] INFO  ninja.RouterImpl - GET     /product/count                                       =>  controllers.ProductController::count
+11:52:48.421 [main] INFO  ninja.RouterImpl - GET     /employeeCount                                       =>  controllers.EmpController::countAllUsers
+11:52:48.421 [main] INFO  ninja.RouterImpl - POST    /bidder/add                                          =>  controllers.BidderController::addBidder
+11:52:48.421 [main] INFO  ninja.RouterImpl - POST    /getBidders/{userId}                                 =>  controllers.BidderController::Bidders
+11:52:48.421 [main] INFO  ninja.RouterImpl - POST    /bidder/count/{userId}                               =>  controllers.BidderController::countTotalBids
+11:52:48.421 [main] INFO  ninja.RouterImpl - POST    /totalWins/{userId}                                  =>  controllers.ProductController::totalWin
+11:52:48.421 [main] INFO  ninja.RouterImpl - POST    /totalLoss                                           =>  controllers.ProductController::totalLoss
+11:52:48.421 [main] INFO  ninja.RouterImpl - GET     /inAuctionProducts                                   =>  controllers.ProductController::allInAuctionProducts
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /isActiveProducts                                    =>  controllers.ProductController::isActiveProducts
+11:52:48.422 [main] INFO  ninja.RouterImpl - POST    /product/{id}                                        =>  controllers.ProductController::singleProductWithId
+11:52:48.422 [main] INFO  ninja.RouterImpl - POST    /bidders/{productId}                                 =>  controllers.BidderController::findBidder
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /getUser                                             =>  controllers.EmpController::getUser
+11:52:48.422 [main] INFO  ninja.RouterImpl - POST    /employee/get/{email}                                =>  controllers.EmpController::getUserEmail
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /bidder/getProducts/{userId}                         =>  controllers.BidderController::getProducts
+11:52:48.422 [main] INFO  ninja.RouterImpl - POST    /updateIsRejected/{productId}                        =>  controllers.ProductController::updateIsRejected
+11:52:48.422 [main] INFO  ninja.RouterImpl - POST    /updateInAuction/{productId}                         =>  controllers.ProductController::updateInAuction
+11:52:48.422 [main] INFO  ninja.RouterImpl - POST    /getBidder/{productId}/{userId}                      =>  controllers.BidderController::getBidder
+11:52:48.422 [main] INFO  ninja.RouterImpl - POST    /updateCurrentBid/{productId}/{userId}/{currentBid}  =>  controllers.BidderController::updateCurrentBid
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /employee/validate/{email}/{password}                =>  controllers.EmpController::validateUser
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /logout                                              =>  controllers.EmpController::logout
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /getProducts/{owner}                                 =>  controllers.ProductController::getAllProducts
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /assets/webjars/{fileName: .*}                       =>  ninja.AssetsController::serveWebJars
+11:52:48.422 [main] INFO  ninja.RouterImpl - GET     /assets/{fileName: .*}                               =>  ninja.AssetsController::serveStatic
+11:52:48.422 [main] INFO  ninja.RouterImpl - OPTIONS /.*                                                  =>  controllers.EmpController::indexOptions
+11:52:48.423 [main] INFO  ninja.NinjaDefault - 
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  https://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   6.9.0
+
+11:52:48.423 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Starting Ninja application...
+11:52:48.423 [main] INFO  n.migrations.MigrationEngineProvider - Using ninja.migrations.flyway.MigrationEngineFlyway as default implementation for ninja.migrations.MigrationEngine
+11:52:48.449 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:48.449 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:./h2_testDB (H2 1.4)
+11:52:48.455 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+11:52:48.459 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+11:52:48.459 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+11:52:48.460 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped post-schema database level objects (execution time 00:00.000s)
+11:52:48.471 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:48.473 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.001s)
+11:52:48.475 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+11:52:48.477 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+11:52:48.480 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1"
+11:52:48.488 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.011s)
+11:52:48.490 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:48.490 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:48.490 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:48.519 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: h2_test
+	...]
+11:52:48.539 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+11:52:48.539 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH010002: C3P0 using driver: org.h2.Driver at URL: jdbc:h2:./h2_testDB
+11:52:48.539 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000046: Connection properties: {user=sa, password=****}
+11:52:48.539 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000006: Autocommit mode: false
+11:52:48.581 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@db27d4fd [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@c8189c19 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0ytavnncu1c1f7ah5f|31fafeeb, idleConnectionTestPeriod -> 300, initialPoolSize -> 0, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 100, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@97c47d18 [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|16ae1509, jdbcUrl -> jdbc:h2:./h2_testDB, properties -> {user=******, password=******} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|7cc5df3d, numHelperThreads -> 3 ]
+11:52:48.605 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:52:48.606 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+11:52:48.612 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:52:48.662 [main] INFO  ninja.scheduler.Scheduler - Scheduling method decideWinner on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:48.663 [main] INFO  ninja.scheduler.Scheduler - Scheduling method setActive on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:48.667 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application started in 244ms
+11:52:48.667 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@544fef53{/,null,AVAILABLE}
+11:52:48.670 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@6fd1a7c9{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:48.671 [main] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@5fbd93dd(ninja-development,h=[ninja],a=[],w=[]) for SslContextFactory@176e5b8c[provider=null,keyStore=null,trustStore=null]
+11:52:48.731 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@50383f03{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:48.731 [main] INFO  org.eclipse.jetty.server.Server - Started @9114ms
+11:52:48.731 [main] INFO  ninja.standalone.NinjaJetty - Started jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:48.732 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:48.732 [main] INFO  ninja.standalone.NinjaJetty - Ninja application running at
+11:52:48.732 [main] INFO  ninja.standalone.NinjaJetty -  => http://localhost:1000
+11:52:48.732 [main] INFO  ninja.standalone.NinjaJetty -  => https://localhost:8443
+11:52:48.732 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+Counted All the Users
+11:52:48.732 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Stopping Ninja application...
+11:52:48.733 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application stopped in 1ms
+11:52:48.733 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@544fef53{/,null,STOPPED}
+11:52:48.733 [main] INFO  ninja.standalone.NinjaJetty - Trying to stop jetty on <all>:1000, 8443/ssl
+11:52:48.736 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@6fd1a7c9{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:48.738 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@50383f03{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:48.740 [main] INFO  ninja.standalone.NinjaJetty - Stopped jetty on <all>:1000, 8443/ssl
+]]></system-out>
+  </testcase>
+  <testcase name="createUser" classname="controllers.EmpControllerTest" time="0.659">
+    <system-out><![CDATA[11:52:48.746 [main] INFO  ninja.utils.NinjaModeHelper - Ninja is running in mode prod
+11:52:49.008 [main] WARN  o.e.j.server.handler.ContextHandler - Empty contextPath
+11:52:49.009 [main] INFO  ninja.standalone.NinjaJetty - Trying to start jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:49.010 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 1.8.0_202-b08
+11:52:49.011 [main] INFO  ninja.servlet.NinjaServletListener - Using JSR-356 websocket container ServerContainer@21271911{STARTED}
+11:52:49.011 [main] INFO  ninja.Bootstrap - Successfully configured Logback.
+11:52:49.011 [main] INFO  ninja.Bootstrap - Enabling Ninja classic configuration
+11:52:49.044 [main] INFO  ninja.utils.SwissKnife - Could not load file conf/messages_en.properties (not a bad thing necessarily, but I am returing null)
+11:52:49.044 [main] INFO  ninja.i18n.MessagesImpl - Did not find conf/messages_en.properties but it was specified in application.conf. Using default language instead.
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - Registered response template engines
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - -------------------------------------------------------------------
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - application/javascript  =>  ninja.template.TemplateEngineJsonP
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - application/json        =>  ninja.template.TemplateEngineJson
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - application/xml         =>  ninja.template.TemplateEngineXml
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - text/html               =>  ninja.template.TemplateEngineFreemarker
+11:52:49.046 [main] INFO  n.template.TemplateEngineManagerImpl - text/plain              =>  ninja.template.TemplateEngineText
+11:52:49.047 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:49.047 [main] INFO  n.b.BodyParserEngineManagerImpl - Registered request bodyparser engines
+11:52:49.047 [main] INFO  n.b.BodyParserEngineManagerImpl - -------------------------------------------------------------------------------------
+11:52:49.047 [main] INFO  n.b.BodyParserEngineManagerImpl - application/json                   =>  ninja.bodyparser.BodyParserEngineJson
+11:52:49.047 [main] INFO  n.b.BodyParserEngineManagerImpl - application/x-www-form-urlencoded  =>  ninja.bodyparser.BodyParserEnginePost
+11:52:49.047 [main] INFO  n.b.BodyParserEngineManagerImpl - application/xml                    =>  ninja.bodyparser.BodyParserEngineXml
+11:52:49.047 [main] INFO  n.b.BodyParserEngineManagerImpl - multipart/form-data                =>  ninja.bodyparser.BodyParserEngineMultipartPost
+11:52:49.047 [main] INFO  ninja.Bootstrap - Ninja injector started in 35 ms.
+11:52:49.055 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:49.055 [main] INFO  ninja.RouterImpl - Registered routes
+11:52:49.055 [main] INFO  ninja.RouterImpl - --------------------------------------------------------------------------------------------
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /employee/add                                        =>  controllers.EmpController::CreateUser
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /product/add                                         =>  controllers.ProductController::CreateProduct
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /notInAuctionProducts                                =>  controllers.ProductController::allNotInAuctionProducts
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /product/count                                       =>  controllers.ProductController::count
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /employeeCount                                       =>  controllers.EmpController::countAllUsers
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /bidder/add                                          =>  controllers.BidderController::addBidder
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /getBidders/{userId}                                 =>  controllers.BidderController::Bidders
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /bidder/count/{userId}                               =>  controllers.BidderController::countTotalBids
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /totalWins/{userId}                                  =>  controllers.ProductController::totalWin
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /totalLoss                                           =>  controllers.ProductController::totalLoss
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /inAuctionProducts                                   =>  controllers.ProductController::allInAuctionProducts
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /isActiveProducts                                    =>  controllers.ProductController::isActiveProducts
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /product/{id}                                        =>  controllers.ProductController::singleProductWithId
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /bidders/{productId}                                 =>  controllers.BidderController::findBidder
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /getUser                                             =>  controllers.EmpController::getUser
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /employee/get/{email}                                =>  controllers.EmpController::getUserEmail
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /bidder/getProducts/{userId}                         =>  controllers.BidderController::getProducts
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /updateIsRejected/{productId}                        =>  controllers.ProductController::updateIsRejected
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /updateInAuction/{productId}                         =>  controllers.ProductController::updateInAuction
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /getBidder/{productId}/{userId}                      =>  controllers.BidderController::getBidder
+11:52:49.055 [main] INFO  ninja.RouterImpl - POST    /updateCurrentBid/{productId}/{userId}/{currentBid}  =>  controllers.BidderController::updateCurrentBid
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /employee/validate/{email}/{password}                =>  controllers.EmpController::validateUser
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /logout                                              =>  controllers.EmpController::logout
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /getProducts/{owner}                                 =>  controllers.ProductController::getAllProducts
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /assets/webjars/{fileName: .*}                       =>  ninja.AssetsController::serveWebJars
+11:52:49.055 [main] INFO  ninja.RouterImpl - GET     /assets/{fileName: .*}                               =>  ninja.AssetsController::serveStatic
+11:52:49.055 [main] INFO  ninja.RouterImpl - OPTIONS /.*                                                  =>  controllers.EmpController::indexOptions
+11:52:49.056 [main] INFO  ninja.NinjaDefault - 
+ _______  .___ _______        ____.  _____   
+ \      \ |   |\      \      |    | /  _  \  
+ /   |   \|   |/   |   \     |    |/  /_\  \ 
+/    |    \   /    |    \/\__|    /    |    \  https://www.ninjaframework.org
+\____|__  /___\____|__  /\________\____|__  /  @ninjaframework
+     web\/framework   \/                  \/   6.9.0
+
+11:52:49.056 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Starting Ninja application...
+11:52:49.056 [main] INFO  n.migrations.MigrationEngineProvider - Using ninja.migrations.flyway.MigrationEngineFlyway as default implementation for ninja.migrations.MigrationEngine
+11:52:49.076 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:49.076 [main] INFO  o.f.c.i.d.base.BaseDatabaseType - Database: jdbc:h2:./h2_testDB (H2 1.4)
+11:52:49.079 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped pre-schema database level objects (execution time 00:00.000s)
+11:52:49.082 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.002s)
+11:52:49.082 [main] INFO  o.f.core.internal.command.DbClean - Successfully cleaned schema "PUBLIC" (execution time 00:00.000s)
+11:52:49.082 [main] INFO  o.f.core.internal.command.DbClean - Successfully dropped post-schema database level objects (execution time 00:00.000s)
+11:52:49.099 [main] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 8.2.2 by Redgate
+11:52:49.103 [main] INFO  o.f.core.internal.command.DbValidate - Successfully validated 1 migration (execution time 00:00.001s)
+11:52:49.113 [main] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+11:52:49.117 [main] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "PUBLIC": << Empty Schema >>
+11:52:49.120 [main] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "PUBLIC" to version "1"
+11:52:49.128 [main] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.012s)
+11:52:49.138 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:49.138 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:49.138 [main] WARN  o.hibernate.ejb.HibernatePersistence - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+11:52:49.149 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: h2_test
+	...]
+11:52:49.202 [main] INFO  o.h.e.j.c.i.ConnectionProviderInitiator - HHH000130: Instantiating explicit connection provider: org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+11:52:49.202 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH010002: C3P0 using driver: org.h2.Driver at URL: jdbc:h2:./h2_testDB
+11:52:49.202 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000046: Connection properties: {user=sa, password=****}
+11:52:49.202 [main] INFO  o.h.c.i.C3P0ConnectionProvider - HHH000006: Autocommit mode: false
+11:52:49.249 [main] INFO  c.m.v.c.i.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.PoolBackedDataSource@4e842fd4 [ connectionPoolDataSource -> com.mchange.v2.c3p0.WrapperConnectionPoolDataSource@72b0a942 [ acquireIncrement -> 1, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, debugUnreturnedConnectionStackTraces -> false, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge0ytavnncu1c1f7ah5f|6bf90728, idleConnectionTestPeriod -> 300, initialPoolSize -> 0, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 100, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 100, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 0, nestedDataSource -> com.mchange.v2.c3p0.DriverManagerDataSource@32e0133d [ description -> null, driverClass -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|3f09250b, jdbcUrl -> jdbc:h2:./h2_testDB, properties -> {user=******, password=******} ], preferredTestQuery -> null, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false; userOverrides: {} ], dataSourceName -> null, factoryClassLocation -> null, identityToken -> 1hge0ytavnncu1c1f7ah5f|51545ae8, numHelperThreads -> 3 ]
+11:52:49.260 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+11:52:49.260 [main] INFO  o.h.e.j.internal.LobCreatorBuilder - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+11:52:49.266 [main] INFO  o.h.h.i.a.ASTQueryTranslatorFactory - HHH000397: Using ASTQueryTranslatorFactory
+11:52:49.325 [main] INFO  ninja.scheduler.Scheduler - Scheduling method decideWinner on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:49.326 [main] INFO  ninja.scheduler.Scheduler - Scheduling method setActive on conf.ScheduledAction to be run every 5 SECONDS after 5 SECONDS
+11:52:49.330 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application started in 274ms
+11:52:49.330 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6e06d8f9{/,null,AVAILABLE}
+11:52:49.333 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7882101{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:49.333 [main] INFO  o.e.jetty.util.ssl.SslContextFactory - x509=X509@3395b049(ninja-development,h=[ninja],a=[],w=[]) for SslContextFactory@29d77422[provider=null,keyStore=null,trustStore=null]
+11:52:49.393 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2a2eb82e{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:49.393 [main] INFO  org.eclipse.jetty.server.Server - Started @9776ms
+11:52:49.393 [main] INFO  ninja.standalone.NinjaJetty - Started jetty v9.4.44.v20210927 on <all>:1000, 8443/ssl
+11:52:49.393 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+11:52:49.393 [main] INFO  ninja.standalone.NinjaJetty - Ninja application running at
+11:52:49.393 [main] INFO  ninja.standalone.NinjaJetty -  => http://localhost:1000
+11:52:49.393 [main] INFO  ninja.standalone.NinjaJetty -  => https://localhost:8443
+11:52:49.394 [main] INFO  ninja.standalone.NinjaJetty - -------------------------------------------------------
+New User HeySam added
+11:52:49.394 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Stopping Ninja application...
+11:52:49.395 [main] INFO  ninja.lifecycle.LifecycleServiceImpl - Ninja application stopped in 1ms
+11:52:49.395 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6e06d8f9{/,null,STOPPED}
+11:52:49.395 [main] INFO  ninja.standalone.NinjaJetty - Trying to stop jetty on <all>:1000, 8443/ssl
+11:52:49.400 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7882101{HTTP/1.1, (http/1.1)}{0.0.0.0:1000}
+11:52:49.401 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@2a2eb82e{SSL, (ssl, http/1.1)}{0.0.0.0:8443}
+11:52:49.404 [main] INFO  ninja.standalone.NinjaJetty - Stopped jetty on <all>:1000, 8443/ssl
+]]></system-out>
+  </testcase>
+</testsuite>

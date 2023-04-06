@@ -62,14 +62,14 @@ public class EmployeeDao {
      */
     @Transactional
     public AppUser AddUser(UserDto userDto){
-        EntityManager em = entityManagerProvider.get();
-        AppUser appUser = new AppUser();
-        appUser.setName(userDto.getName());
-        appUser.setPassword(userDto.getPassword());
-        appUser.setEmail(userDto.getEmail());
-        em.persist(appUser);
-        System.out.println("User Created Successfully");
-        return appUser;
+            EntityManager em = entityManagerProvider.get();
+            AppUser appUser = new AppUser();
+            appUser.setName(userDto.getName());
+            appUser.setPassword(userDto.getPassword());
+            appUser.setEmail(userDto.getEmail());
+            em.persist(appUser);
+            System.out.println("User Created Successfully");
+            return appUser;
     }
 
     @Transactional

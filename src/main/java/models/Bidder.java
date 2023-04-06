@@ -6,6 +6,7 @@ import javax.persistence.*;
 @Table(schema = "public")
 @NamedQueries({
         @NamedQuery(name = "Bidder.countBidderByUserId",query = "Select count(b) from Bidder b where b.userId=:userId"),
+        @NamedQuery(name = "Bidder.BiddersByUserId",query = "Select b from Bidder b where b.userId=:userId"),
         @NamedQuery(name = "Bidder.findBiddersByProductId",query="SELECT b from Bidder b where b.productId=:productId order by b.currentBid DESC "),
 //        @NamedQuery(name="Bidder.findBidderWithMaxBid",query = "select b from Bidder b where b.currentBid = (select max(currentBid) from Bidder)"),
 //        @NamedQuery(name = "Bidder.changeBidder'sCurrentBid",query = "update Bidder set ")

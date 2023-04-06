@@ -4,9 +4,9 @@ import com.google.inject.Inject;
 import dao.BidderDao;
 import dto.BidderDto;
 import models.Bidder;
+import models.Product;
 import ninja.Result;
 import ninja.Results;
-import ninja.params.Param;
 import ninja.params.PathParam;
 
 import java.util.List;
@@ -25,6 +25,12 @@ public class BidderController {
         System.out.println("total bids");
         Long count = bidderDao.countBids(userId);
         return Results.json().render(count);
+    }
+
+    public Result Bidders(@PathParam("userId") String userId){
+        System.out.println("Bids");
+        List<Bidder> bidder = bidderDao.bidders(userId);
+        return Results.json().render(bidder);
     }
 
     public Result findBidder(@PathParam("productId") Long productId){
@@ -71,6 +77,20 @@ public class BidderController {
            Bidder bidder = bidderDao.getBidder(productId,userId);
             System.out.println("Bidder is "+bidder);
             return Results.json().render(bidder);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return Results.badRequest().json().render("Bad Request");
+        }
+    }
+
+
+    public Result getProducts(@PathParam("userId") String userId){
+        try {
+            List<Product> products = bidderDao.getProducts(userId);
+            System.out.println("Products fetched");
+            return Results.json().render(products);
+
         }
         catch(Exception e){
             e.printStackTrace();

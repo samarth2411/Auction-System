@@ -16,7 +16,9 @@ public class EmpController {
     EmployeeDao userDao;
 
 
-    public Result CreateUser(UserDto userDto,Session session,Context context){
+
+
+    public Result CreateUser(UserDto userDto, Session session){
         try{
             AppUser appUser = userDao.AddUser(userDto);
             System.out.println("New User "+userDto.getName()+" added");
@@ -31,40 +33,88 @@ public class EmpController {
     }
 
     public Result countAllUsers() throws Exception {
-        System.out.println("Counted All the Users");
-        return Results.json().render(userDao.countAllUsers());
+        try{
+            System.out.println("Counted All the Users");
+            Long count = userDao.countAllUsers();
+            if(count==null){
+                return Results.badRequest().json().render("Bad Request");
+            }
+            return Results.json().render(count);
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return Results.badRequest().json().render("Bad Request");
+
     }
 
-    public Result validateUser(@PathParam("email") String email , @PathParam("password") String password , Session session ,Context context) {
-        AppUser result = userDao.validate(email,password);
-        session.clear();
-        session.put("email",email);
-        return Results.json().render(result);
+    public Result validateUser(@PathParam("email") String email , @PathParam("password") String password , Session session){
+        try {
+            AppUser result = userDao.validate(email,password);
+            session.clear();
+            if(email==null && password==null){
+                return Results.badRequest().json().render("Bad Request");
+            }
+            session.put("email",email);
+
+            return Results.json().render(result);
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return Results.badRequest().json().render("Bad Request");
+
     }
 
     public Result getUser(Context context) throws Exception {
-        if(context.getSession()!=null){
-            String email = context.getSession().get("email");
-            AppUser user = userDao.getUser(email);
-            return Results.json().render(user);
+        try{
+            if(context.getSession()!=null){
+                String email = context.getSession().get("email");
+                AppUser user = userDao.getUser(email);
+                return Results.json().render(user);
+            }
+            else{
+                return Results.unauthorized().json().render("Unauthorized");
+            }
+
         }
-        else{
-            return Results.unauthorized().json().render("Unauthorized");
+        catch(Exception e){
+            e.printStackTrace();
         }
+        return Results.badRequest().json().render("Bad Request");
 
     }
 
     public Result getUserEmail(@PathParam("email") String email){
-        AppUser user = userDao.getUserEmail(email);
-        return Results.json().render(user);
+        try{
+            AppUser user = userDao.getUserEmail(email);
+            return Results.json().render(user);
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return Results.badRequest().json().render("Bad Request");
+
 
     }
 
     public Result logout(Session session,Context context){
-        System.out.println("User Logged Out");
-        session.clear();
-        boolean logout = true;
-        return Results.json().render(logout);
+        try{
+            System.out.println("User Logged Out");
+            session.clear();
+            boolean logout = true;
+            return Results.json().render(logout);
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return Results.badRequest().json().render("Bad Request");
+
     }
 
 

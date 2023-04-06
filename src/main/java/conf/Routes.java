@@ -109,6 +109,8 @@ public class Routes implements ApplicationRoutes {
 
         router.POST().route("/bidder/add").with(BidderController::addBidder);
 
+        router.POST().route("/getBidders/{userId}").filters(CorsHandler.class).with(BidderController::Bidders);
+
         router.POST().route("/bidder/count/{userId}").filters(CorsHandler.class).with(BidderController::countTotalBids);
 
         router.POST().route("/totalWins/{userId}").filters(CorsHandler.class).with(ProductController::totalWin);
@@ -126,6 +128,8 @@ public class Routes implements ApplicationRoutes {
         router.GET().route("/getUser").filters(CorsHandler.class).with(EmpController::getUser);
 
         router.POST().route("/employee/get/{email}").filters(CorsHandler.class).with(EmpController::getUserEmail);
+
+        router.GET().route("/bidder/getProducts/{userId}").filters(CorsHandler.class).with(BidderController::getProducts);
 
 
         router.POST().route("/updateIsRejected/{productId}").filters(CorsHandler.class).with(ProductController::updateIsRejected);
